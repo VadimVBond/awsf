@@ -1,9 +1,21 @@
 ---
 import translations from './gallery.json';
 import { getLocaleFromUrl } from '~/i18n/translator';
+import { SITE } from '~/utils/config';
 
 const locale = getLocaleFromUrl(Astro.url) || 'en';
-const langData = translations[locale] || translations['en'];
+const langDataRaw = (translations[locale] || translations['en']) as any[];
+
+const base = SITE.base === '/' ? '' : SITE.base;
+
+const langData = langDataRaw.map(p => ({
+  ...p,
+  images: p.images.map(img => img.startsWith('/') ? `${base}${img}` : img),
+  technologies: (p.technologies || []).map(t => ({
+    ...t,
+    iconPath: t.icon ? `${base}/icons/${t.icon}.svg` : null
+  }))
+}));
 
 const titleDict = {
     'en': 'Projects Gallery',
@@ -387,7 +399,7 @@ const uniqueCategories = [allCategories, ...Array.from(new Set(langData.map(p =>
     </div>
 </div>
 
-<script>
+<script define:vars={{ base }}>
     document.addEventListener('DOMContentLoaded', () => {
         // Фильтры
         const filterBtns = document.querySelectorAll('.filter-btn');
@@ -493,9 +505,9 @@ const uniqueCategories = [allCategories, ...Array.from(new Set(langData.map(p =>
                         li.style.gap = '6px';
                         li.style.whiteSpace = 'nowrap';
                         
-                        if(t.icon) {
+                        if(t.iconPath || t.icon) {
                             const img = document.createElement('img');
-                            img.src = `/icons/${t.icon}.svg`;
+                            img.src = t.iconPath || `${base}/icons/${t.icon}.svg`;
                             img.alt = t.name;
                             img.loading = 'lazy';
                             img.style.height = '16px';

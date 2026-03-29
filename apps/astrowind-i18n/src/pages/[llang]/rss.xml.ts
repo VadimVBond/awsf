@@ -15,7 +15,7 @@ export function getStaticPaths() {
   return Object.keys(I18N.locales).map((locale) => ({ params: { llang: locale } }));
 }
 
-export const get: APIRoute = async function get({ params, redirect }) {
+export const GET: APIRoute = async function ({ params, redirect }) {
   const locale = params.llang || I18N.defaultLocale;
 
   if (!APP_BLOG.isEnabled) {

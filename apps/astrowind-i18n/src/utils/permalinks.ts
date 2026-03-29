@@ -85,8 +85,13 @@ const definitivePermalink = (permalink: string): string => createPath(BASE_PATHN
 
 export const getLocalizedPermalink = (locale, slug = '', type = 'page'): string => {
   const permalink = getPermalink(slug, type);
-  return locale === I18N.defaultLocale ? permalink : createPath(locale, permalink);
-}
+  if (locale === I18N.defaultLocale) return permalink;
+
+  const base = trimSlash(BASE_PATHNAME);
+  const path = trimSlash(permalink.replace(new RegExp(`^${BASE_PATHNAME}`), ''));
+
+  return createPath(base, locale, path);
+};
 
 /** */
 export const getLocalizedHomePermalink = (locale): string => getLocalizedPermalink(locale, '/');

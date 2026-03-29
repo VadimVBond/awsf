@@ -2,7 +2,7 @@
 import { UI, I18N, SITE } from '~/utils/config';
 ---
 
-<script is:inline define:vars={{ defaultTheme: UI.theme, locales:I18N.locales, trailingSlash:SITE.trailingSlash }}>
+<script is:inline define:vars={{ defaultTheme: UI.theme, locales:I18N.locales, trailingSlash:SITE.trailingSlash, base: SITE.base, defaultLocale: I18N.defaultLocale }}>
   function applyTheme(theme) {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
@@ -65,16 +65,27 @@ import { UI, I18N, SITE } from '~/utils/config';
 
     attachEvent('[data-aw-select-language]', 'change', function (_, elem) {
       const newLang = elem.value;
-      const oldUrl = window.location.href;
+      const pathname = window.location.pathname;
       const supportedLangs = Object.keys(locales);
+      const actualBase = base === '/' ? '' : base;
 
-      const urlWithoutOrigin = oldUrl.replace(window.location.origin, '');
-      const urlWithoutOriginLang = supportedLangs.reduce((acc, lang) => {
-        return acc.replace(`/${lang}`, '');
-      }, urlWithoutOrigin)
-      const newUrlWithoutTrailingSlash = urlWithoutOriginLang.replace(/\/$/, '');
+      let relativePath = pathname.startsWith(actualBase) ? pathname.substring(actualBase.length) : pathname;
 
-      const newUrl = `/${newLang}${newUrlWithoutTrailingSlash}${trailingSlash ? '/' : ''}`;
+      supportedLangs.forEach(lang => {
+        if (relativePath.startsWith(`/${lang}/`)) {
+          relativePath = relativePath.substring(lang.length + 1);
+        } else if (relativePath === `/${lang}`) {
+          relativePath = '/';
+        }
+      });
+
+      const localePart = newLang === defaultLocale ? '' : `/${newLang}`;
+      const finalRelativePath = relativePath.startsWith('/') ? relativePath : '/' + relativePath;
+
+      let newUrl = `${actualBase}${localePart}${finalRelativePath}`;
+      newUrl = newUrl.replace(/\/+$/, '') + (trailingSlash ? '/' : '');
+      if (newUrl === '') newUrl = '/';
+
       window.location.pathname = newUrl;
     });
 

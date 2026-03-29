@@ -7,7 +7,8 @@ export const de = {
   header: {
     homes: { title: 'Startseite', saas: 'Saas', startup: 'Startup', app: 'App herunterladen', personal: 'Persönlich' },
     pages: { title: 'Seiten', features: 'Funktionen (Ankerlink)', services: 'Dienstleistungen', pricing: 'Preise', aboutUs: 'Über uns', contactUs: 'Kontakt', terms: 'Bedingungen', privacyPolicy: 'Datenschutzrichtlinie' },
-    landing: { title: 'Landing', leadGeneration: 'Lead-Generierung', sales: 'Langform-Verkäufe', clickThrough: 'Klickrate', squeeze: 'Squeeze', product: 'Produktdetails (oder Dienstleistungen)', comingSoon: 'Bald verfügbar', gallery: 'Galerie' },
+    landing: { title: 'Landing', leadGeneration: 'Lead-Generierung', sales: 'Langform-Verkäufe', clickThrough: 'Klickrate', squeeze: 'Squeeze', product: 'Produktdetails (oder Dienstleistungen)', comingSoon: 'Bald verfügbar', gallery: 'Galerie',
+      galleryHero: { tagline: 'Portfolio', title: 'Unsere Projekte', subtitle: 'Entdecken Sie unsere aktuellen Projekte und Erfolgsgeschichten.', goBack: 'Zurück' }, },
     blog: { title: 'Blog', blogList: 'Artikelliste', article: 'Artikel', articleMdx: 'Artikel (mit MDX)', category: 'Kategorie-Seite', tag: 'Tag-Seite' },
     widgets: 'Widgets', contact: 'Kontakt', download: 'Herunterladen',
   },
@@ -458,6 +459,9 @@ export const de = {
     landings,
   },
 };
+
+
+
 
 
 

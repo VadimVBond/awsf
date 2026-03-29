@@ -26,7 +26,8 @@ export const ru = {
   header: {
     homes: { title: 'Главная', saas: 'Saas', startup: 'Стартап', app: 'Скачать приложение', personal: 'Личный' },
     pages: { title: 'Страницы', features: 'Функции (якорная ссылка)', services: 'Услуги', pricing: 'Цены', aboutUs: 'О нас', contactUs: 'Контакты', terms: 'Условия', privacyPolicy: 'Политика конфиденциальности' },
-    landing: { title: 'Лендинг', leadGeneration: 'Генерация лидов', sales: 'Длинные продажи', clickThrough: 'Кликабельная страница', squeeze: 'Squeeze', product: 'Информация о продукте (или услугах)', comingSoon: 'Скоро будет', gallery: 'Галерея' },
+    landing: { title: 'Лендинг', leadGeneration: 'Генерация лидов', sales: 'Длинные продажи', clickThrough: 'Кликабельная страница', squeeze: 'Squeeze', product: 'Информация о продукте (или услугах)', comingSoon: 'Скоро будет', gallery: 'Галерея',
+      galleryHero: { tagline: 'Портфолио', title: 'Наши проекты', subtitle: 'Узнайте о наших недавних проектах и историях успеха.', goBack: 'Назад' }, },
     blog: { title: 'Блог', blogList: 'Список статей', article: 'Статья', articleMdx: 'Статья (с MDX)', category: 'Страница категории', tag: 'Страница тега' },
     widgets: 'Виджеты', contact: 'Контакты', download: 'Скачать',
   },
@@ -538,5 +539,8 @@ export const ru = {
       },
   }
 };
+
+
+
 
 

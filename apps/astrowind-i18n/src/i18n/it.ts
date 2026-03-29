@@ -31,6 +31,7 @@ export const it = {
       product: 'Dettagli prodotto',
       comingSoon: 'In arrivo',
       gallery: 'Galleria',
+      galleryHero: { tagline: 'Portfolio', title: 'I Nostri Progetti', subtitle: 'Scopri i nostri progetti recenti e i casi di successo.', goBack: 'Torna indietro' },
     },
     blog: {
       title: 'Blog',
@@ -522,5 +523,8 @@ export const it = {
     landings,
   },
 };
+
+
+
 
 

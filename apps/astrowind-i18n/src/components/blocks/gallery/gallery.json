@@ -525,8 +525,8 @@
         }
       ],
       "title": "Hack4tools",
-      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks. (Перевод на русский)",
-      "slogan": "Herramientas y utilidades para pentesters (Слоган RU)",
+      "description": "Веб-сайт, объединяющий обширную коллекцию инструментов и утилит для пентестеров: от инструментов OSINT и перечисления до словарей и фреймворков.",
+      "slogan": "Hack4tools",
       "category": "Tools",
       "images": [
         "/projects/hack4tools/1.webp",
@@ -602,8 +602,8 @@
         }
       ],
       "title": "NaNaNames",
-      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel. (Перевод на русский)",
-      "slogan": "Generador de nombres de mascotas usando IA (Слоган RU)",
+      "description": "Веб-сайт для генерации смешных и запоминающихся имен для домашних животных с использованием сервисов искусственного интеллекта Co:here. Разработан для участия в хакатоне Midudev.",
+      "slogan": "NaNaNames",
       "category": "Web",
       "images": [
         "/projects/nananames/1.webp",
@@ -677,8 +677,8 @@
         }
       ],
       "title": "MiduPass",
-      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev. (Перевод на русский)",
-      "slogan": "Generador de contraseñas (Слоган RU)",
+      "description": "Генератор паролей, созданный на React.js для участия в хакатоне Hacktoberfest 2022.",
+      "slogan": "MiduPass",
       "category": "Tools",
       "images": [
         "/projects/midupass/1.png",
@@ -756,8 +756,8 @@
         }
       ],
       "title": "Avocadoo",
-      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel. (Перевод на русский)",
-      "slogan": "Tienda de aguacates (Слоган RU)",
+      "description": "Магазин авокадо, созданный на Next.js и развернутый на Vercel.",
+      "slogan": "Avocadoo",
       "category": "Web",
       "images": [
         "/projects/avocadoo/1.webp",
@@ -845,8 +845,8 @@
         }
       ],
       "title": "Giboo",
-      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes. (Перевод на русский)",
-      "slogan": "Un lugar para descubrir gifs divertidos (Слоган RU)",
+      "description": "Сайт для поиска сотен смешных гифок. Разработан на React.js с использованием Giphy API.",
+      "slogan": "Giboo",
       "category": "Other",
       "images": [
         "/projects/giboo/1.webp",
@@ -930,8 +930,8 @@
         }
       ],
       "title": "Firefly Components",
-      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V. (Перевод на русский)",
-      "slogan": "Set de componentes minimalistas y reutilizables (Слоган RU)",
+      "description": "Набор минималистичных и переиспользуемых компонентов на React и Styled Components.",
+      "slogan": "Firefly Components",
       "category": "Other",
       "images": [
         "/projects/firefly-components/1.webp",
@@ -1009,8 +1009,8 @@
         }
       ],
       "title": "Hack4tools",
-      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks. (Переклад українською)",
-      "slogan": "Herramientas y utilidades para pentesters (Слоган UK)",
+      "description": "Веб-сайт, що об'єднує велику колекцію інструментів та утиліт для пентестерів: від інструментів OSINT та перерахування до словників та фреймворків.",
+      "slogan": "Hack4tools",
       "category": "Tools",
       "images": [
         "/projects/hack4tools/1.webp",
@@ -1086,8 +1086,8 @@
         }
       ],
       "title": "NaNaNames",
-      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel. (Переклад українською)",
-      "slogan": "Generador de nombres de mascotas usando IA (Слоган UK)",
+      "description": "Веб-сайт для генерації смішних та пам'ятних імен для домашніх тварин з використанням сервісів штучного інтелекту Co:here. Розроблено для участі в хакатоні Midudev.",
+      "slogan": "NaNaNames",
       "category": "Web",
       "images": [
         "/projects/nananames/1.webp",
@@ -1161,8 +1161,8 @@
         }
       ],
       "title": "MiduPass",
-      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev. (Переклад українською)",
-      "slogan": "Generador de contraseñas (Слоган UK)",
+      "description": "Генератор паролів, створений на React.js для участі в хакатоні Hacktoberfest 2022.",
+      "slogan": "MiduPass",
       "category": "Tools",
       "images": [
         "/projects/midupass/1.png",
@@ -1240,8 +1240,8 @@
         }
       ],
       "title": "Avocadoo",
-      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel. (Переклад українською)",
-      "slogan": "Tienda de aguacates (Слоган UK)",
+      "description": "Магазин авокадо, створений на Next.js та розгорнутий на Vercel.",
+      "slogan": "Avocadoo",
       "category": "Web",
       "images": [
         "/projects/avocadoo/1.webp",
@@ -1329,8 +1329,8 @@
         }
       ],
       "title": "Giboo",
-      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes. (Переклад українською)",
-      "slogan": "Un lugar para descubrir gifs divertidos (Слоган UK)",
+      "description": "Сайт для пошуку сотень смішних гіфок. Розроблено на React.js з використанням Giphy API.",
+      "slogan": "Giboo",
       "category": "Other",
       "images": [
         "/projects/giboo/1.webp",
@@ -1414,8 +1414,8 @@
         }
       ],
       "title": "Firefly Components",
-      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V. (Переклад українською)",
-      "slogan": "Set de componentes minimalistas y reutilizables (Слоган UK)",
+      "description": "Набір мінімалістичних компонентів на React та Styled Components, що можна використовувати повторно.",
+      "slogan": "Firefly Components",
       "category": "Other",
       "images": [
         "/projects/firefly-components/1.webp",
@@ -1493,8 +1493,8 @@
         }
       ],
       "title": "Hack4tools",
-      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks. (Traduzione italiana)",
-      "slogan": "Herramientas y utilidades para pentesters (Slogan IT)",
+      "description": "Un sito web che concentra una vasta collezione di strumenti e utilità per i pentesters, dagli strumenti di osint ed enumerazione ai dizionari e ai framework.",
+      "slogan": "Hack4tools",
       "category": "Tools",
       "images": [
         "/projects/hack4tools/1.webp",
@@ -1570,8 +1570,8 @@
         }
       ],
       "title": "NaNaNames",
-      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel. (Traduzione italiana)",
-      "slogan": "Generador de nombres de mascotas usando IA (Slogan IT)",
+      "description": "Un sito web per generare nomi di animali domestici divertenti e accattivanti utilizzando i servizi di intelligenza artificiale di Co:here.",
+      "slogan": "NaNaNames",
       "category": "Web",
       "images": [
         "/projects/nananames/1.webp",
@@ -1645,8 +1645,8 @@
         }
       ],
       "title": "MiduPass",
-      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev. (Traduzione italiana)",
-      "slogan": "Generador de contraseñas (Slogan IT)",
+      "description": "Un generatore di password realizzato con React.js sviluppato per partecipare all'Hacktoberfest 2022.",
+      "slogan": "MiduPass",
       "category": "Tools",
       "images": [
         "/projects/midupass/1.png",
@@ -1724,8 +1724,8 @@
         }
       ],
       "title": "Avocadoo",
-      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel. (Traduzione italiana)",
-      "slogan": "Tienda de aguacates (Slogan IT)",
+      "description": "Un negozio di avocado realizzato con Next.js e distribuito su Vercel.",
+      "slogan": "Avocadoo",
       "category": "Web",
       "images": [
         "/projects/avocadoo/1.webp",
@@ -1813,8 +1813,8 @@
         }
       ],
       "title": "Giboo",
-      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes. (Traduzione italiana)",
-      "slogan": "Un lugar para descubrir gifs divertidos (Slogan IT)",
+      "description": "Giboo è un sito web per scoprire centinaia di gif divertenti. È sviluppato in React.js e utilizza l'API di Giphy.",
+      "slogan": "Giboo",
       "category": "Other",
       "images": [
         "/projects/giboo/1.webp",
@@ -1898,8 +1898,8 @@
         }
       ],
       "title": "Firefly Components",
-      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V. (Traduzione italiana)",
-      "slogan": "Set de componentes minimalistas y reutilizables (Slogan IT)",
+      "description": "Un set di componenti minimalisti e riutilizzabili realizzati in React e stilizzati con Styled Components.",
+      "slogan": "Firefly Components",
       "category": "Other",
       "images": [
         "/projects/firefly-components/1.webp",
@@ -1977,8 +1977,8 @@
         }
       ],
       "title": "Hack4tools",
-      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks. (Traduction française)",
-      "slogan": "Herramientas y utilidades para pentesters (Slogan FR)",
+      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks.",
+      "slogan": "Hack4tools",
       "category": "Tools",
       "images": [
         "/projects/hack4tools/1.webp",
@@ -2054,8 +2054,8 @@
         }
       ],
       "title": "NaNaNames",
-      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel. (Traduction française)",
-      "slogan": "Generador de nombres de mascotas usando IA (Slogan FR)",
+      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel.",
+      "slogan": "NaNaNames",
       "category": "Web",
       "images": [
         "/projects/nananames/1.webp",
@@ -2129,8 +2129,8 @@
         }
       ],
       "title": "MiduPass",
-      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev. (Traduction française)",
-      "slogan": "Generador de contraseñas (Slogan FR)",
+      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
+      "slogan": "MiduPass",
       "category": "Tools",
       "images": [
         "/projects/midupass/1.png",
@@ -2208,8 +2208,8 @@
         }
       ],
       "title": "Avocadoo",
-      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel. (Traduction française)",
-      "slogan": "Tienda de aguacates (Slogan FR)",
+      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
+      "slogan": "Avocadoo",
       "category": "Web",
       "images": [
         "/projects/avocadoo/1.webp",
@@ -2297,8 +2297,8 @@
         }
       ],
       "title": "Giboo",
-      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes. (Traduction française)",
-      "slogan": "Un lugar para descubrir gifs divertidos (Slogan FR)",
+      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
+      "slogan": "Giboo",
       "category": "Other",
       "images": [
         "/projects/giboo/1.webp",
@@ -2382,8 +2382,8 @@
         }
       ],
       "title": "Firefly Components",
-      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V. (Traduction française)",
-      "slogan": "Set de componentes minimalistas y reutilizables (Slogan FR)",
+      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+      "slogan": "Firefly Components",
       "category": "Other",
       "images": [
         "/projects/firefly-components/1.webp",
@@ -2461,8 +2461,8 @@
         }
       ],
       "title": "Hack4tools",
-      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks. (Deutsche Übersetzung)",
-      "slogan": "Herramientas y utilidades para pentesters (Slogan DE)",
+      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks.",
+      "slogan": "Hack4tools",
       "category": "Tools",
       "images": [
         "/projects/hack4tools/1.webp",
@@ -2538,8 +2538,8 @@
         }
       ],
       "title": "NaNaNames",
-      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel. (Deutsche Übersetzung)",
-      "slogan": "Generador de nombres de mascotas usando IA (Slogan DE)",
+      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel.",
+      "slogan": "NaNaNames",
       "category": "Web",
       "images": [
         "/projects/nananames/1.webp",
@@ -2613,8 +2613,8 @@
         }
       ],
       "title": "MiduPass",
-      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev. (Deutsche Übersetzung)",
-      "slogan": "Generador de contraseñas (Slogan DE)",
+      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
+      "slogan": "MiduPass",
       "category": "Tools",
       "images": [
         "/projects/midupass/1.png",
@@ -2692,8 +2692,8 @@
         }
       ],
       "title": "Avocadoo",
-      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel. (Deutsche Übersetzung)",
-      "slogan": "Tienda de aguacates (Slogan DE)",
+      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
+      "slogan": "Avocadoo",
       "category": "Web",
       "images": [
         "/projects/avocadoo/1.webp",
@@ -2781,8 +2781,8 @@
         }
       ],
       "title": "Giboo",
-      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes. (Deutsche Übersetzung)",
-      "slogan": "Un lugar para descubrir gifs divertidos (Slogan DE)",
+      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
+      "slogan": "Giboo",
       "category": "Other",
       "images": [
         "/projects/giboo/1.webp",
@@ -2866,8 +2866,8 @@
         }
       ],
       "title": "Firefly Components",
-      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V. (Deutsche Übersetzung)",
-      "slogan": "Set de componentes minimalistas y reutilizables (Slogan DE)",
+      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+      "slogan": "Firefly Components",
       "category": "Other",
       "images": [
         "/projects/firefly-components/1.webp",

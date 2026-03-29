@@ -7,7 +7,8 @@ export const uk = {
   header: {
     homes: { title: 'Головна', saas: 'Saas', startup: 'Стартап', app: 'Завантажити додаток', personal: 'Особисте' },
     pages: { title: 'Сторінки', features: 'Функції', services: 'Послуги', pricing: 'Ціни', aboutUs: 'Про нас', contactUs: 'Контакти', terms: 'Умови', privacyPolicy: 'Політика конфіденційності' },
-    landing: { title: 'Лендінг', leadGeneration: 'Генерація лідів', sales: 'Довгі продажі', clickThrough: 'Клікабельна сторінка', squeeze: 'Squeeze', product: 'Інформація про продукт', comingSoon: 'Незабаром', gallery: 'Галерея' },
+    landing: { title: 'Лендінг', leadGeneration: 'Генерація лідів', sales: 'Довгі продажі', clickThrough: 'Клікабельна сторінка', squeeze: 'Squeeze', product: 'Інформація про продукт', comingSoon: 'Незабаром', gallery: 'Галерея',
+      galleryHero: { tagline: 'Портфоліо', title: 'Наші проекти', subtitle: 'Дізнайтеся про наші нещодавні проекти та історії успіху.', goBack: 'Назад' }, },
     blog: { title: 'Блог', blogList: 'Список статей', article: 'Стаття', articleMdx: 'Стаття (з MDX)', category: 'Сторінка категорії', tag: 'Сторінка тегу' },
     widgets: 'Віджети', contact: 'Контакти', download: 'Завантажити',
   },
@@ -436,5 +437,8 @@ export const uk = {
     landings,
   },
 };
+
+
+
 
 

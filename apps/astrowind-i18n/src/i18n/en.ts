@@ -49,6 +49,7 @@ export const en = {
       product: 'Product Details (or Services)',
       comingSoon: 'Coming Soon or Pre-Launch',
       gallery: 'Gallery',
+      galleryHero: { tagline: 'Portfolio', title: 'Our Projects', subtitle: 'Discover our recent projects and success cases.', goBack: 'Go back' },
     },
     blog: {
       title: 'Blog',
@@ -606,4 +607,6 @@ export const en = {
       },
   }
 }
+
+
 

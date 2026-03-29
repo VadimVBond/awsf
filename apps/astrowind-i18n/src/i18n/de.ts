@@ -7,8 +7,7 @@ export const de = {
   header: {
     homes: { title: 'Startseite', saas: 'Saas', startup: 'Startup', app: 'App herunterladen', personal: 'Persönlich' },
     pages: { title: 'Seiten', features: 'Funktionen (Ankerlink)', services: 'Dienstleistungen', pricing: 'Preise', aboutUs: 'Über uns', contactUs: 'Kontakt', terms: 'Bedingungen', privacyPolicy: 'Datenschutzrichtlinie' },
-    landing: { title: 'Landing', leadGeneration: 'Lead-Generierung', sales: 'Langform-Verkäufe', clickThrough: 'Klickrate', squeeze: 'Squeeze', product: 'Produktdetails (oder Dienstleistungen)', comingSoon: 'Bald verfügbar' },
-      gallery: 'Gallery',
+    landing: { title: 'Landing', leadGeneration: 'Lead-Generierung', sales: 'Langform-Verkäufe', clickThrough: 'Klickrate', squeeze: 'Squeeze', product: 'Produktdetails (oder Dienstleistungen)', comingSoon: 'Bald verfügbar', gallery: 'Galerie' },
     blog: { title: 'Blog', blogList: 'Artikelliste', article: 'Artikel', articleMdx: 'Artikel (mit MDX)', category: 'Kategorie-Seite', tag: 'Tag-Seite' },
     widgets: 'Widgets', contact: 'Kontakt', download: 'Herunterladen',
   },
@@ -321,6 +320,137 @@ export const de = {
     subtitle: 'Ein statisch generiertes Blog-Beispiel mit Nachrichten, Tutorials, Ressourcen und anderen interessanten Inhalten zu AstroWind',
     tags: 'Tags:',
   },
+  personal_p: {
+    cta: {
+      title: "Lassen Sie uns gemeinsam gestalten",
+      subtitle: "Bereit, Ihre Vision in fesselnde Designs zu verwandeln?",
+      cta: {
+        text: "Engagiere mich",
+        href: "/contact"
+      },
+      },
+    metadata: {
+      title: "Persönliche Homepage Demo",
+    },
+    links: [
+      { text: "Startseite", href: "/" },
+      { text: "Über mich", href: "#about" },
+      { text: "Lebenslauf", href: "#resume" },
+      { text: "Portfolio", href: "#portfolio" },
+      { text: "Blog", href: "#blog" },
+      { text: "Github", href: "https://github.com/" },
+    ],
+    actions: [
+      { text: "Engagiere mich", href: "#contact" },
+    ],
+    hero: {
+      title: "Sarah Johnson",
+      tagline: "Persönliche Website Demo",
+      cta: {
+        text: "Engagiere mich",
+        href: "/contact"
+      },
+      subtitle: "Ich bin eine Grafikdesignerin mit Leidenschaft für visuelle Geschichten. Mit 5 Jahren Erfahrung und einem Abschluss der School of Design der New York University erwecke ich Marken zum Leben.",
+    },
+    about: {
+      title: "Über mich",
+      paragraph1: "Willkommen auf meiner kreativen Reise. Meine Arbeit ist ein Zeugnis meines Engagements, Ideen zum Leben zu erwecken.",
+      paragraph2: "Ich finde Inspiration in der Welt um mich herum, sei es in den Seiten eines fesselnden Romans oder in den vibrierenden Farben der Natur.",
+      paragraph3: "Wenn Sie mehr über meine Arbeit erfahren möchten, folgen Sie mir hier:",
+      items: [
+        { title: "Dribbble", icon: 'tabler:brand-dribbble' },
+        { title: "Behance", icon: 'tabler:brand-behance' },
+        { title: "Pinterest", icon: 'tabler:brand-pinterest' }
+      ],
+      image: {
+        src: "https://images.unsplash.com/photo-1491349174775-aaafddd81942?auto=format&fit=crop&w=774&q=80",
+        alt: "Farbenfrohes Bild"
+      }
+    },
+    content: {
+      portfolio: {
+        title: "Visuelle Erzählungen aufwerten",
+        subtitle: "Begeben Sie sich auf eine Designreise, die über Pixel hinausgeht. Erkunden Sie mein Portfolio.",
+        items: [
+          {
+            title: "Markenidentität für Tech-Innovatoren",
+            description: "Umfassende Markenidentität für ein Tech-Startup entwickelt.",
+            role: "Den gesamten Branding-Prozess vom Konzept bis zur Ausführung geleitet.",
+          },
+          {
+            title: "Veranstaltungsplakat für Kunst- & Musikfestival",
+            description: "Fesselndes Veranstaltungsplakat für das Festival 'ArtWave Fusion' entworfen.",
+            role: "Das kreative Thema des Festivals in ein visuell beeindruckendes Plakat übersetzt.",
+          },
+          {
+            title: "E-Commerce-Website-Redesign für Modemarke",
+            description: "Die E-Commerce-Website für die umweltbewusste Modemarke GreenVogue neu gestaltet.",
+            role: "Eine gründliche Analyse der Markenwerte durchgeführt, um die Designrichtung vorzugeben.",
+          },
+        ],
+        image: ""
+      },
+    },
+    steps: {
+      workExperience: [
+        {
+          title: "Grafikdesignerin im ABC Design Studio (2021 - Heute)",
+          description: "Zusammenarbeit mit Kunden zur Erarbeitung von Designanforderungen.",
+          icon: 'tabler:briefcase',
+        },
+        {
+          title: "Junior Grafikdesignerin in der XYZ Creative Agency (2018 - 2021)",
+          description: "Unterstützung von Senior-Designern bei der Erstellung von Designkonzepten.",
+          icon: 'tabler:briefcase',
+        },
+      ],
+      education: [
+        {
+          title: "Master of Fine Arts in Grafikdesign (2018 - 2020)",
+          icon: 'tabler:school',
+        },
+        {
+          title: "Bachelor of Arts in Grafikdesign (2014 - 2018)",
+          icon: 'tabler:school',
+        },
+      ],
+    },
+    skills: {
+      title: "Fähigkeiten",
+      subtitle: "Entdecken Sie die Kompetenzen, die es mir ermöglichen, Fantasie zum Leben zu erwecken.",
+      items: [
+        { title: 'Grafikdesign', description: 'Profiliert in der Gestaltung visuell ansprechender Designs.' },
+        { title: 'Branding und Identität', description: 'Erfahren in der Entwicklung kohärenter Markenidentitäten.' },
+        { title: 'Benutzerzentriertes Design', description: 'Erfahren in der Erstellung benutzerfreundlicher Oberflächen.' },
+        { title: 'Adobe Creative Suite', description: 'Sicher im Umgang mit Photoshop, Illustrator und InDesign.' },
+      ],
+    },
+    testimonials: {
+      title: "Testimonials",
+      subtitle: "Was die Leute über meine Arbeit sagen",
+      items: [
+        {
+          testimonial: "Sie hat unser vages Konzept in ein visuelles Meisterwerk verwandelt.",
+          name: "Mark Thompson",
+          job: "Art Director",
+          image: { src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=774&q=80', alt: 'Mark Thompson' },
+        },
+      ],
+    },
+    portfolio: {
+      callToAction: {
+        title: "Lassen Sie uns gemeinsam gestalten",
+        subtitle: "Bereit für fesselnde Designs?",
+        action: "Engagiere mich",
+        button: "Engagiere mich",
+        href: "/",
+      },
+    },
+    blog: {
+      title: "Erkunden Sie aufschlussreiche Artikel in meinem Blog",
+      information: "Tauchen Sie ein in eine Welt voller Design-Weisheit und kreativer Inspiration.",
+    },
+  },
   lp: {
     saas,
     startup,
@@ -328,5 +458,6 @@ export const de = {
     landings,
   },
 };
+
 
 

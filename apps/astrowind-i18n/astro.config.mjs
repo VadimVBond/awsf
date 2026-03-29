@@ -47,6 +47,7 @@ export default defineConfig({
           i18n({
             locales: I18N.locales,
             defaultLocale: I18N.defaultLocale,
+            exclude: ["pages/ru/**/*", "pages/uk/**/*", "pages/it/**/*", "pages/[llang]/**/*"],
           }),
           sitemap({
             i18n: {

@@ -10,8 +10,13 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
+import { I18N } from '~/utils/config';
 
 const { t, tList } = useTranslations(getLocaleFromUrl(Astro.url));
+
+export function getStaticPaths() {
+  return Object.keys(I18N.locales).map((locale) => ({ params: { llang: locale } }));
+}
 
 const metadata = {
   title: t('personal_p.metadata.title'),

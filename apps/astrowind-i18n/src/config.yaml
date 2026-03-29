@@ -1,7 +1,7 @@
 site:
   name: AstroWind
-  site: 'https://astrowind-i18n.vercel.app'
-  base: '/'
+  site: 'https://VadimVBond.github.io'
+  base: '/astrowind-i18n'
   trailingSlash: true
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M

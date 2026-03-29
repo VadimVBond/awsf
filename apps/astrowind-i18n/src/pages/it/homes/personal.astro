@@ -14,37 +14,47 @@ import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
 const { t, tList } = useTranslations(getLocaleFromUrl(Astro.url));
 
 const metadata = {
-  title: t('personal.metadata.title'),
+  title: t('personal_p.metadata.title'),
 };
 ---
 
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
   <Fragment slot="header">
-    <Header links={t('personal.header.links')} actions={t('personal.header.actions')} isSticky showToggleTheme />
+    <Header links={tList('personal_p.links')} actions={tList('personal_p.actions')} isSticky showToggleTheme />
   </Fragment>
 
   <!-- Hero Widget -->
   <Hero
     id="hero"
-    title={t('personal.hero.title')}
-    tagline={t('personal.hero.tagline')}
-    callToAction={t('personal.hero.cta')}
+    title={t('personal_p.hero.title')}
+    tagline={t('personal_p.hero.tagline')}
+    callToAction={{
+      text: t('personal_p.hero.cta.text'),
+      href: t('personal_p.hero.cta.href'),
+    }}
   >
     <Fragment slot="subtitle">
-      {t('personal.hero.subtitle')}
+      {t('personal_p.hero.subtitle')}
     </Fragment>
   </Hero>
 
   <!-- About Content -->
-  <Content id="about" items={t('personal.about.items')} image={t('personal.about.image')}>
+  <Content
+    id="about"
+    items={tList('personal_p.about.items')}
+    image={{
+      src: t('personal_p.about.image.src'),
+      alt: t('personal_p.about.image.alt'),
+    }}
+  >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{t('personal.about.title')}</h3>
-      <p>{t('personal.about.paragraph1')}</p>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{t('personal_p.about.title')}</h3>
+      <p>{t('personal_p.about.paragraph1')}</p>
       <br />
-      <p>{t('personal.about.paragraph2')}</p>
+      <p>{t('personal_p.about.paragraph2')}</p>
       <br />
-      <p>{t('personal.about.paragraph3')}</p>
+      <p>{t('personal_p.about.paragraph3')}</p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -54,38 +64,38 @@ const metadata = {
   <!-- Resume Steps -->
   <Steps
     id="resume"
-    title={t('personal.resume.work.title')}
-    items={t('personal.resume.work.items')}
+    title="Work Experience"
+    items={tList('personal_p.steps.workExperience')}
     classes={{ container: 'max-w-3xl' }}
   />
   <Steps
     id="education"
-    title={t('personal.resume.education.title')}
-    items={t('personal.resume.education.items')}
+    title="Education"
+    items={tList('personal_p.steps.education')}
     classes={{ container: 'max-w-3xl' }}
   />
 
   <!-- Skills -->
   <Features3
-    title={t('personal.skills.title')}
-    subtitle={t('personal.skills.subtitle')}
+    title={t('personal_p.skills.title')}
+    subtitle={t('personal_p.skills.subtitle')}
     columns={3}
     defaultIcon="tabler:point-filled"
-    items={t('personal.skills.items')}
+    items={tList('personal_p.skills.items')}
   />
 
   <!-- Portfolio -->
   <Content
     id="portfolio"
-    title={t('personal.portfolio.title')}
-    subtitle={t('personal.portfolio.subtitle')}
+    title={t('personal_p.content.portfolio.title')}
+    subtitle={t('personal_p.content.portfolio.subtitle')}
     isReversed
-    items={t('personal.portfolio.items')}
-    image={t('personal.portfolio.image')}
+    items={tList('personal_p.content.portfolio.items')}
+    image={t('personal_p.content.portfolio.image')}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        {t('personal.portfolio.project1.title')}
+        {t('personal_p.content.portfolio.title')}
       </h3>
     </Fragment>
     <Fragment slot="bg">
@@ -97,20 +107,23 @@ const metadata = {
 
   <!-- Testimonials -->
   <Testimonials
-    title={t('personal.testimonials.title')}
-    subtitle={t('personal.testimonials.subtitle')}
-    testimonials={t('personal.testimonials.items')}
+    title={t('personal_p.testimonials.title')}
+    subtitle={t('personal_p.testimonials.subtitle')}
+    testimonials={tList('personal_p.testimonials.items')}
   />
 
   <!-- Call To Action -->
   <CallToAction
-    title={t('personal.cta.title')}
-    subtitle={t('personal.cta.subtitle')}
-    callToAction={t('personal.cta.action')}
+    title={t('personal_p.cta.title')}
+    subtitle={t('personal_p.cta.subtitle')}
+    callToAction={{
+      text: t('personal_p.hero.cta.text'),
+      href: t('personal_p.hero.cta.href'),
+    }}
   />
 
   <!-- Blog Section -->
-  <BlogLatestPosts id="blog" title={t('personal.blog.title')} information={t('personal.blog.information')}>
+  <BlogLatestPosts id="blog" title={t('personal_p.blog.title')} information={t('personal_p.blog.information')}>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>

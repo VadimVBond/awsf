@@ -7,8 +7,7 @@ export const fr = {
   header: {
     homes: { title: 'Accueil', saas: 'Saas', startup: 'Startup', app: 'Télécharger l\'app', personal: 'Personnel' },
     pages: { title: 'Pages', features: 'Fonctionnalités (Lien ancre)', services: 'Services', pricing: 'Tarifs', aboutUs: 'À propos', contactUs: 'Contact', terms: 'Conditions', privacyPolicy: 'Politique de confidentialité' },
-    landing: { title: 'Landing', leadGeneration: 'Génération de leads', sales: 'Ventes longue forme', clickThrough: 'Clic à travers', squeeze: 'Squeeze', product: 'Détails du produit (ou services)', comingSoon: 'Bientôt disponible' },
-      gallery: 'Gallery',
+    landing: { title: 'Landing', leadGeneration: 'Génération de leads', sales: 'Ventes longue forme', clickThrough: 'Clic à travers', squeeze: 'Squeeze', product: 'Détails du produit (ou services)', comingSoon: 'Bientôt disponible', gallery: 'Gallery' },
     blog: { title: 'Blog', blogList: 'Liste des articles', article: 'Article', articleMdx: 'Article (avec MDX)', category: 'Page de catégorie', tag: 'Page de tag' },
     widgets: 'Widgets', contact: 'Contact', download: 'Télécharger',
   },
@@ -321,6 +320,115 @@ export const fr = {
     subtitle: 'Exemple de blog statique avec actualités, tutoriels, ressources et autres contenus intéressants sur AstroWind',
     tags: 'Tags:',
   },
+  personal_p: {
+    cta: {
+      title: "Créons ensemble",
+      subtitle: "Prêt à transformer votre vision en designs captivants ?",
+      cta: {
+        text: "Engagez-moi",
+        href: "/contact"
+      },
+      },
+    metadata: {
+      title: "Démo de page d'accueil personnelle",
+    },
+    links: [
+      { text: "Accueil", href: "/" },
+      { text: "À propos", href: "#about" },
+      { text: "CV", href: "#resume" },
+      { text: "Portfolio", href: "#portfolio" },
+      { text: "Blog", href: "#blog" },
+      { text: "Github", href: "https://github.com/" },
+    ],
+    actions: [
+      { text: "Engagez-moi", href: "#contact" },
+    ],
+    hero: {
+      title: "Sarah Johnson",
+      tagline: "Démo de site web personnel",
+      cta: {
+        text: "Engagez-moi",
+        href: "/contact"
+      },
+      subtitle: "Je suis une designer graphique passionnée par les histoires visuelles. Avec 5 ans d'expérience.",
+    },
+    about: {
+      title: "À propos",
+      paragraph1: "Bienvenue dans mon voyage créatif.",
+      paragraph2: "Je trouve mon inspiration dans le monde qui m'entoure.",
+      paragraph3: "Si vous êtes curieux, suivez-moi :",
+      items: [
+        { title: "Dribbble", icon: 'tabler:brand-dribbble' },
+        { title: "Behance", icon: 'tabler:brand-behance' },
+        { title: "Pinterest", icon: 'tabler:brand-pinterest' }
+      ],
+      image: {
+        src: "https://images.unsplash.com/photo-1491349174775-aaafddd81942?auto=format&fit=crop&w=774&q=80",
+        alt: "Image colorée"
+      }
+    },
+    content: {
+      portfolio: {
+        title: "Élever les récits visuels",
+        subtitle: "Embarquez pour un voyage de design qui dépasse les pixels.",
+        items: [
+          {
+            title: "Identité de marque pour innovateurs technologiques",
+            description: "Développement d'une identité de marque complète.",
+            role: "Direction de l'ensemble du processus de branding.",
+          },
+        ],
+        image: ""
+      },
+    },
+    steps: {
+      workExperience: [
+        {
+          title: "Designer graphique chez ABC Design Studio (2021 - Présent)",
+          description: "Collaboration avec les clients.",
+          icon: 'tabler:briefcase',
+        },
+      ],
+      education: [
+        {
+          title: "Master of Fine Arts en Design Graphique (2018 - 2020)",
+          icon: 'tabler:school',
+        },
+      ],
+    },
+    skills: {
+      title: "Compétences",
+      subtitle: "Découvrez les expertises que je mets à votre service.",
+      items: [
+        { title: 'Design graphique', description: 'Expertise dans la création de designs attrayants.' },
+      ],
+    },
+    testimonials: {
+      title: "Témoignages",
+      subtitle: "Ce que l'on dit de mon travail",
+      items: [
+        {
+          testimonial: "Elle a transformé notre concept flou en un chef-d'œuvre visuel.",
+          name: "Mark Thompson",
+          job: "Directeur créatif",
+          image: { src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=774&q=80', alt: 'Mark Thompson' },
+        },
+      ],
+    },
+    portfolio: {
+      callToAction: {
+        title: "Créons ensemble",
+        subtitle: "Prêt pour des designs captivants ?",
+        action: "Engagez-moi",
+        button: "Engagez-moi",
+        href: "/",
+      },
+    },
+    blog: {
+      title: "Explorez des articles inspirants sur mon blog",
+      information: "Plongez dans un univers de sagesse design.",
+    },
+  },
   lp: {
     saas,
     startup,
@@ -328,5 +436,6 @@ export const fr = {
     landings,
   },
 };
+
 
 

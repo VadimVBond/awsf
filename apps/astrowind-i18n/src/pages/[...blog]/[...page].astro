@@ -39,7 +39,7 @@ const metadata = {
     </Headline>
     <PostTags tags={allTags}  title={t('blog.tags') || "Tags:"} class="flex flex-wrap justify-center mb-12" />
 
-    <BlogList posts={page.data.map(p => p.locales[locale])} />
+    <BlogList posts={page.data.map(p => p.locales[locale] || p.locales['en']).filter(Boolean)} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
 </Layout>

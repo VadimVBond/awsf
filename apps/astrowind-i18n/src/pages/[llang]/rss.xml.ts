@@ -12,11 +12,11 @@ export function getStaticPaths() {
     return [];
   }
 
-  return Object.keys(I18N.locales).map((locale) => ({ params: { locale } }));
+  return Object.keys(I18N.locales).map((locale) => ({ params: { llang: locale } }));
 }
 
 export const get: APIRoute = async function get({ params, redirect }) {
-  const locale = params.locale || I18N.defaultLocale;
+  const locale = params.llang || I18N.defaultLocale;
 
   if (!APP_BLOG.isEnabled) {
     return new Response(null, {

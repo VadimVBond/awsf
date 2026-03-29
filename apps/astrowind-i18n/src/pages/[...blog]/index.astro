@@ -15,7 +15,11 @@ export async function getStaticPaths () {
 }
 
 const { post } = Astro.props;
-const localizedPost = post.locales[getLocaleFromUrl(Astro.url)];
+const locale = getLocaleFromUrl(Astro.url);
+const localizedPost = post.locales[locale] || post.locales['en'] || post.locales[Object.keys(post.locales)[0]];
+if (!localizedPost) {
+  throw new Error(`Localized content not found for post "${post.id}" and locale "${locale}"`);
+}
 
 const url = getCanonical(getPermalink(localizedPost.permalink, 'post'));
 const image = (await findImage(localizedPost.image)) as ImageMetadata | undefined;

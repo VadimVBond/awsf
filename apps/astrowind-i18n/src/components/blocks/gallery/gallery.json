@@ -1,0 +1,2906 @@
+{
+  "en": [
+    {
+      "id": "hack4tools",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/hack4tools",
+      "projectSite": "https://hack4tools.vercel.app",
+      "projectTitle": "Hack4tools",
+      "projectSlogan": "Herramientas y utilidades para pentesters",
+      "projectDescription": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Hack4tools",
+      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks.",
+      "slogan": "Herramientas y utilidades para pentesters",
+      "category": "Tools",
+      "images": [
+        "/projects/hack4tools/1.webp",
+        "/projects/hack4tools/2.webp",
+        "/projects/hack4tools/3.webp",
+        "/projects/hack4tools/4.webp",
+        "/projects/hack4tools/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "nananames",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/nananames",
+      "projectSite": "https://nananames.vercel.app",
+      "projectTitle": "NaNaNames",
+      "projectSlogan": "Generador de nombres de mascotas usando IA",
+      "projectDescription": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "NaNaNames",
+      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel.",
+      "slogan": "Generador de nombres de mascotas usando IA",
+      "category": "Web",
+      "images": [
+        "/projects/nananames/1.webp",
+        "/projects/nananames/2.webp",
+        "/projects/nananames/3.webp",
+        "/projects/nananames/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "midupass",
+      "carouselImages": [
+        "1.png",
+        "2.png",
+        "3.png"
+      ],
+      "projectRepo": "https://github.com/devenapuros/midupass",
+      "projectSite": "https://midupass.netlify.app",
+      "projectTitle": "MiduPass",
+      "projectSlogan": "Generador de contraseñas",
+      "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "MiduPass",
+      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
+      "slogan": "Generador de contraseñas",
+      "category": "Tools",
+      "images": [
+        "/projects/midupass/1.png",
+        "/projects/midupass/2.png",
+        "/projects/midupass/3.png"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    },
+    {
+      "id": "avocadoo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/avocadoo/",
+      "projectSite": "https://avocadoo.vercel.app/",
+      "projectTitle": "Avocadoo",
+      "projectSlogan": "Tienda de aguacates",
+      "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Avocadoo",
+      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
+      "slogan": "Tienda de aguacates",
+      "category": "Web",
+      "images": [
+        "/projects/avocadoo/1.webp",
+        "/projects/avocadoo/2.webp",
+        "/projects/avocadoo/3.webp",
+        "/projects/avocadoo/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "giboo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/giboo",
+      "projectSite": "https://giboo.vercel.app/",
+      "projectTitle": "Giboo",
+      "projectSlogan": "Un lugar para descubrir gifs divertidos",
+      "projectDescription": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Giboo",
+      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
+      "slogan": "Un lugar para descubrir gifs divertidos",
+      "category": "Other",
+      "images": [
+        "/projects/giboo/1.webp",
+        "/projects/giboo/2.webp",
+        "/projects/giboo/3.webp",
+        "/projects/giboo/4.webp",
+        "/projects/giboo/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "firefly-components",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+      "projectSite": "https://firefly-components.netlify.app/",
+      "projectTitle": "Firefly Components",
+      "projectSlogan": "Set de componentes minimalistas y reutilizables",
+      "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "Firefly Components",
+      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+      "slogan": "Set de componentes minimalistas y reutilizables",
+      "category": "Other",
+      "images": [
+        "/projects/firefly-components/1.webp",
+        "/projects/firefly-components/2.webp",
+        "/projects/firefly-components/3.webp",
+        "/projects/firefly-components/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    }
+  ],
+  "ru": [
+    {
+      "id": "hack4tools",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/hack4tools",
+      "projectSite": "https://hack4tools.vercel.app",
+      "projectTitle": "Hack4tools",
+      "projectSlogan": "Herramientas y utilidades para pentesters",
+      "projectDescription": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Hack4tools",
+      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks. (Перевод на русский)",
+      "slogan": "Herramientas y utilidades para pentesters (Слоган RU)",
+      "category": "Tools",
+      "images": [
+        "/projects/hack4tools/1.webp",
+        "/projects/hack4tools/2.webp",
+        "/projects/hack4tools/3.webp",
+        "/projects/hack4tools/4.webp",
+        "/projects/hack4tools/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "nananames",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/nananames",
+      "projectSite": "https://nananames.vercel.app",
+      "projectTitle": "NaNaNames",
+      "projectSlogan": "Generador de nombres de mascotas usando IA",
+      "projectDescription": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "NaNaNames",
+      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel. (Перевод на русский)",
+      "slogan": "Generador de nombres de mascotas usando IA (Слоган RU)",
+      "category": "Web",
+      "images": [
+        "/projects/nananames/1.webp",
+        "/projects/nananames/2.webp",
+        "/projects/nananames/3.webp",
+        "/projects/nananames/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "midupass",
+      "carouselImages": [
+        "1.png",
+        "2.png",
+        "3.png"
+      ],
+      "projectRepo": "https://github.com/devenapuros/midupass",
+      "projectSite": "https://midupass.netlify.app",
+      "projectTitle": "MiduPass",
+      "projectSlogan": "Generador de contraseñas",
+      "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "MiduPass",
+      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev. (Перевод на русский)",
+      "slogan": "Generador de contraseñas (Слоган RU)",
+      "category": "Tools",
+      "images": [
+        "/projects/midupass/1.png",
+        "/projects/midupass/2.png",
+        "/projects/midupass/3.png"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    },
+    {
+      "id": "avocadoo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/avocadoo/",
+      "projectSite": "https://avocadoo.vercel.app/",
+      "projectTitle": "Avocadoo",
+      "projectSlogan": "Tienda de aguacates",
+      "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Avocadoo",
+      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel. (Перевод на русский)",
+      "slogan": "Tienda de aguacates (Слоган RU)",
+      "category": "Web",
+      "images": [
+        "/projects/avocadoo/1.webp",
+        "/projects/avocadoo/2.webp",
+        "/projects/avocadoo/3.webp",
+        "/projects/avocadoo/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "giboo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/giboo",
+      "projectSite": "https://giboo.vercel.app/",
+      "projectTitle": "Giboo",
+      "projectSlogan": "Un lugar para descubrir gifs divertidos",
+      "projectDescription": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Giboo",
+      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes. (Перевод на русский)",
+      "slogan": "Un lugar para descubrir gifs divertidos (Слоган RU)",
+      "category": "Other",
+      "images": [
+        "/projects/giboo/1.webp",
+        "/projects/giboo/2.webp",
+        "/projects/giboo/3.webp",
+        "/projects/giboo/4.webp",
+        "/projects/giboo/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "firefly-components",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+      "projectSite": "https://firefly-components.netlify.app/",
+      "projectTitle": "Firefly Components",
+      "projectSlogan": "Set de componentes minimalistas y reutilizables",
+      "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "Firefly Components",
+      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V. (Перевод на русский)",
+      "slogan": "Set de componentes minimalistas y reutilizables (Слоган RU)",
+      "category": "Other",
+      "images": [
+        "/projects/firefly-components/1.webp",
+        "/projects/firefly-components/2.webp",
+        "/projects/firefly-components/3.webp",
+        "/projects/firefly-components/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    }
+  ],
+  "uk": [
+    {
+      "id": "hack4tools",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/hack4tools",
+      "projectSite": "https://hack4tools.vercel.app",
+      "projectTitle": "Hack4tools",
+      "projectSlogan": "Herramientas y utilidades para pentesters",
+      "projectDescription": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Hack4tools",
+      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks. (Переклад українською)",
+      "slogan": "Herramientas y utilidades para pentesters (Слоган UK)",
+      "category": "Tools",
+      "images": [
+        "/projects/hack4tools/1.webp",
+        "/projects/hack4tools/2.webp",
+        "/projects/hack4tools/3.webp",
+        "/projects/hack4tools/4.webp",
+        "/projects/hack4tools/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "nananames",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/nananames",
+      "projectSite": "https://nananames.vercel.app",
+      "projectTitle": "NaNaNames",
+      "projectSlogan": "Generador de nombres de mascotas usando IA",
+      "projectDescription": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "NaNaNames",
+      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel. (Переклад українською)",
+      "slogan": "Generador de nombres de mascotas usando IA (Слоган UK)",
+      "category": "Web",
+      "images": [
+        "/projects/nananames/1.webp",
+        "/projects/nananames/2.webp",
+        "/projects/nananames/3.webp",
+        "/projects/nananames/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "midupass",
+      "carouselImages": [
+        "1.png",
+        "2.png",
+        "3.png"
+      ],
+      "projectRepo": "https://github.com/devenapuros/midupass",
+      "projectSite": "https://midupass.netlify.app",
+      "projectTitle": "MiduPass",
+      "projectSlogan": "Generador de contraseñas",
+      "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "MiduPass",
+      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev. (Переклад українською)",
+      "slogan": "Generador de contraseñas (Слоган UK)",
+      "category": "Tools",
+      "images": [
+        "/projects/midupass/1.png",
+        "/projects/midupass/2.png",
+        "/projects/midupass/3.png"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    },
+    {
+      "id": "avocadoo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/avocadoo/",
+      "projectSite": "https://avocadoo.vercel.app/",
+      "projectTitle": "Avocadoo",
+      "projectSlogan": "Tienda de aguacates",
+      "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Avocadoo",
+      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel. (Переклад українською)",
+      "slogan": "Tienda de aguacates (Слоган UK)",
+      "category": "Web",
+      "images": [
+        "/projects/avocadoo/1.webp",
+        "/projects/avocadoo/2.webp",
+        "/projects/avocadoo/3.webp",
+        "/projects/avocadoo/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "giboo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/giboo",
+      "projectSite": "https://giboo.vercel.app/",
+      "projectTitle": "Giboo",
+      "projectSlogan": "Un lugar para descubrir gifs divertidos",
+      "projectDescription": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Giboo",
+      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes. (Переклад українською)",
+      "slogan": "Un lugar para descubrir gifs divertidos (Слоган UK)",
+      "category": "Other",
+      "images": [
+        "/projects/giboo/1.webp",
+        "/projects/giboo/2.webp",
+        "/projects/giboo/3.webp",
+        "/projects/giboo/4.webp",
+        "/projects/giboo/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "firefly-components",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+      "projectSite": "https://firefly-components.netlify.app/",
+      "projectTitle": "Firefly Components",
+      "projectSlogan": "Set de componentes minimalistas y reutilizables",
+      "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "Firefly Components",
+      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V. (Переклад українською)",
+      "slogan": "Set de componentes minimalistas y reutilizables (Слоган UK)",
+      "category": "Other",
+      "images": [
+        "/projects/firefly-components/1.webp",
+        "/projects/firefly-components/2.webp",
+        "/projects/firefly-components/3.webp",
+        "/projects/firefly-components/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    }
+  ],
+  "it": [
+    {
+      "id": "hack4tools",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/hack4tools",
+      "projectSite": "https://hack4tools.vercel.app",
+      "projectTitle": "Hack4tools",
+      "projectSlogan": "Herramientas y utilidades para pentesters",
+      "projectDescription": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Hack4tools",
+      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks. (Traduzione italiana)",
+      "slogan": "Herramientas y utilidades para pentesters (Slogan IT)",
+      "category": "Tools",
+      "images": [
+        "/projects/hack4tools/1.webp",
+        "/projects/hack4tools/2.webp",
+        "/projects/hack4tools/3.webp",
+        "/projects/hack4tools/4.webp",
+        "/projects/hack4tools/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "nananames",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/nananames",
+      "projectSite": "https://nananames.vercel.app",
+      "projectTitle": "NaNaNames",
+      "projectSlogan": "Generador de nombres de mascotas usando IA",
+      "projectDescription": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "NaNaNames",
+      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel. (Traduzione italiana)",
+      "slogan": "Generador de nombres de mascotas usando IA (Slogan IT)",
+      "category": "Web",
+      "images": [
+        "/projects/nananames/1.webp",
+        "/projects/nananames/2.webp",
+        "/projects/nananames/3.webp",
+        "/projects/nananames/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "midupass",
+      "carouselImages": [
+        "1.png",
+        "2.png",
+        "3.png"
+      ],
+      "projectRepo": "https://github.com/devenapuros/midupass",
+      "projectSite": "https://midupass.netlify.app",
+      "projectTitle": "MiduPass",
+      "projectSlogan": "Generador de contraseñas",
+      "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "MiduPass",
+      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev. (Traduzione italiana)",
+      "slogan": "Generador de contraseñas (Slogan IT)",
+      "category": "Tools",
+      "images": [
+        "/projects/midupass/1.png",
+        "/projects/midupass/2.png",
+        "/projects/midupass/3.png"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    },
+    {
+      "id": "avocadoo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/avocadoo/",
+      "projectSite": "https://avocadoo.vercel.app/",
+      "projectTitle": "Avocadoo",
+      "projectSlogan": "Tienda de aguacates",
+      "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Avocadoo",
+      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel. (Traduzione italiana)",
+      "slogan": "Tienda de aguacates (Slogan IT)",
+      "category": "Web",
+      "images": [
+        "/projects/avocadoo/1.webp",
+        "/projects/avocadoo/2.webp",
+        "/projects/avocadoo/3.webp",
+        "/projects/avocadoo/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "giboo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/giboo",
+      "projectSite": "https://giboo.vercel.app/",
+      "projectTitle": "Giboo",
+      "projectSlogan": "Un lugar para descubrir gifs divertidos",
+      "projectDescription": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Giboo",
+      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes. (Traduzione italiana)",
+      "slogan": "Un lugar para descubrir gifs divertidos (Slogan IT)",
+      "category": "Other",
+      "images": [
+        "/projects/giboo/1.webp",
+        "/projects/giboo/2.webp",
+        "/projects/giboo/3.webp",
+        "/projects/giboo/4.webp",
+        "/projects/giboo/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "firefly-components",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+      "projectSite": "https://firefly-components.netlify.app/",
+      "projectTitle": "Firefly Components",
+      "projectSlogan": "Set de componentes minimalistas y reutilizables",
+      "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "Firefly Components",
+      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V. (Traduzione italiana)",
+      "slogan": "Set de componentes minimalistas y reutilizables (Slogan IT)",
+      "category": "Other",
+      "images": [
+        "/projects/firefly-components/1.webp",
+        "/projects/firefly-components/2.webp",
+        "/projects/firefly-components/3.webp",
+        "/projects/firefly-components/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    }
+  ],
+  "fr": [
+    {
+      "id": "hack4tools",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/hack4tools",
+      "projectSite": "https://hack4tools.vercel.app",
+      "projectTitle": "Hack4tools",
+      "projectSlogan": "Herramientas y utilidades para pentesters",
+      "projectDescription": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Hack4tools",
+      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks. (Traduction française)",
+      "slogan": "Herramientas y utilidades para pentesters (Slogan FR)",
+      "category": "Tools",
+      "images": [
+        "/projects/hack4tools/1.webp",
+        "/projects/hack4tools/2.webp",
+        "/projects/hack4tools/3.webp",
+        "/projects/hack4tools/4.webp",
+        "/projects/hack4tools/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "nananames",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/nananames",
+      "projectSite": "https://nananames.vercel.app",
+      "projectTitle": "NaNaNames",
+      "projectSlogan": "Generador de nombres de mascotas usando IA",
+      "projectDescription": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "NaNaNames",
+      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel. (Traduction française)",
+      "slogan": "Generador de nombres de mascotas usando IA (Slogan FR)",
+      "category": "Web",
+      "images": [
+        "/projects/nananames/1.webp",
+        "/projects/nananames/2.webp",
+        "/projects/nananames/3.webp",
+        "/projects/nananames/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "midupass",
+      "carouselImages": [
+        "1.png",
+        "2.png",
+        "3.png"
+      ],
+      "projectRepo": "https://github.com/devenapuros/midupass",
+      "projectSite": "https://midupass.netlify.app",
+      "projectTitle": "MiduPass",
+      "projectSlogan": "Generador de contraseñas",
+      "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "MiduPass",
+      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev. (Traduction française)",
+      "slogan": "Generador de contraseñas (Slogan FR)",
+      "category": "Tools",
+      "images": [
+        "/projects/midupass/1.png",
+        "/projects/midupass/2.png",
+        "/projects/midupass/3.png"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    },
+    {
+      "id": "avocadoo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/avocadoo/",
+      "projectSite": "https://avocadoo.vercel.app/",
+      "projectTitle": "Avocadoo",
+      "projectSlogan": "Tienda de aguacates",
+      "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Avocadoo",
+      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel. (Traduction française)",
+      "slogan": "Tienda de aguacates (Slogan FR)",
+      "category": "Web",
+      "images": [
+        "/projects/avocadoo/1.webp",
+        "/projects/avocadoo/2.webp",
+        "/projects/avocadoo/3.webp",
+        "/projects/avocadoo/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "giboo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/giboo",
+      "projectSite": "https://giboo.vercel.app/",
+      "projectTitle": "Giboo",
+      "projectSlogan": "Un lugar para descubrir gifs divertidos",
+      "projectDescription": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Giboo",
+      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes. (Traduction française)",
+      "slogan": "Un lugar para descubrir gifs divertidos (Slogan FR)",
+      "category": "Other",
+      "images": [
+        "/projects/giboo/1.webp",
+        "/projects/giboo/2.webp",
+        "/projects/giboo/3.webp",
+        "/projects/giboo/4.webp",
+        "/projects/giboo/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "firefly-components",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+      "projectSite": "https://firefly-components.netlify.app/",
+      "projectTitle": "Firefly Components",
+      "projectSlogan": "Set de componentes minimalistas y reutilizables",
+      "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "Firefly Components",
+      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V. (Traduction française)",
+      "slogan": "Set de componentes minimalistas y reutilizables (Slogan FR)",
+      "category": "Other",
+      "images": [
+        "/projects/firefly-components/1.webp",
+        "/projects/firefly-components/2.webp",
+        "/projects/firefly-components/3.webp",
+        "/projects/firefly-components/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    }
+  ],
+  "de": [
+    {
+      "id": "hack4tools",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/hack4tools",
+      "projectSite": "https://hack4tools.vercel.app",
+      "projectTitle": "Hack4tools",
+      "projectSlogan": "Herramientas y utilidades para pentesters",
+      "projectDescription": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Hack4tools",
+      "description": "Una web que concentra una amplia colección de herramientas y utilidades para pentesters, desde herramientas de osint y enumeración hasta diccionarios y frameworks. (Deutsche Übersetzung)",
+      "slogan": "Herramientas y utilidades para pentesters (Slogan DE)",
+      "category": "Tools",
+      "images": [
+        "/projects/hack4tools/1.webp",
+        "/projects/hack4tools/2.webp",
+        "/projects/hack4tools/3.webp",
+        "/projects/hack4tools/4.webp",
+        "/projects/hack4tools/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "nananames",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/nananames",
+      "projectSite": "https://nananames.vercel.app",
+      "projectTitle": "NaNaNames",
+      "projectSlogan": "Generador de nombres de mascotas usando IA",
+      "projectDescription": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "NaNaNames",
+      "description": "Un sitio web para generar nombres de mascotas graciosos y pegadizos usando los servicios de inteligencia artificial de Co:here.\nFue desarrollado para participar en la hackathon organizada por Miguel Ángel Durán (Midudev), usando Next.js y desplegado en Vercel. (Deutsche Übersetzung)",
+      "slogan": "Generador de nombres de mascotas usando IA (Slogan DE)",
+      "category": "Web",
+      "images": [
+        "/projects/nananames/1.webp",
+        "/projects/nananames/2.webp",
+        "/projects/nananames/3.webp",
+        "/projects/nananames/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "midupass",
+      "carouselImages": [
+        "1.png",
+        "2.png",
+        "3.png"
+      ],
+      "projectRepo": "https://github.com/devenapuros/midupass",
+      "projectSite": "https://midupass.netlify.app",
+      "projectTitle": "MiduPass",
+      "projectSlogan": "Generador de contraseñas",
+      "projectDescription": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "MiduPass",
+      "description": "Un generador de contraseñas hecho con React.js desarrollado para participar en la Hackaton \"Hacktoberfest 2022\" organizada por Midudev. (Deutsche Übersetzung)",
+      "slogan": "Generador de contraseñas (Slogan DE)",
+      "category": "Tools",
+      "images": [
+        "/projects/midupass/1.png",
+        "/projects/midupass/2.png",
+        "/projects/midupass/3.png"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "CSS Modules",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    },
+    {
+      "id": "avocadoo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/avocadoo/",
+      "projectSite": "https://avocadoo.vercel.app/",
+      "projectTitle": "Avocadoo",
+      "projectSlogan": "Tienda de aguacates",
+      "projectDescription": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel.",
+      "projectTechnologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Avocadoo",
+      "description": "Una tienda de aguacates hecha con Next.js y desplegada en los servicios de Vercel. (Deutsche Übersetzung)",
+      "slogan": "Tienda de aguacates (Slogan DE)",
+      "category": "Web",
+      "images": [
+        "/projects/avocadoo/1.webp",
+        "/projects/avocadoo/2.webp",
+        "/projects/avocadoo/3.webp",
+        "/projects/avocadoo/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "Next.js",
+          "icon": "nextjs"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Yarn",
+          "icon": "yarn"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "giboo",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp",
+        "5.webp"
+      ],
+      "projectRepo": "https://github.com/devenapuros/giboo",
+      "projectSite": "https://giboo.vercel.app/",
+      "projectTitle": "Giboo",
+      "projectSlogan": "Un lugar para descubrir gifs divertidos",
+      "projectDescription": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ],
+      "title": "Giboo",
+      "description": "Giboo es un sitio web para descubrir cientos de gifs divertidos. Esta desarrollado en React.js y usa la API de Giphy para obtener las imágenes. (Deutsche Übersetzung)",
+      "slogan": "Un lugar para descubrir gifs divertidos (Slogan DE)",
+      "category": "Other",
+      "images": [
+        "/projects/giboo/1.webp",
+        "/projects/giboo/2.webp",
+        "/projects/giboo/3.webp",
+        "/projects/giboo/4.webp",
+        "/projects/giboo/5.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "NPM",
+          "icon": "npm"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        }
+      ]
+    },
+    {
+      "id": "firefly-components",
+      "carouselImages": [
+        "1.webp",
+        "2.webp",
+        "3.webp",
+        "4.webp"
+      ],
+      "projectRepo": "https://github.com/Lamparas-Estella-SA-CV/firefly-components-docs",
+      "projectSite": "https://firefly-components.netlify.app/",
+      "projectTitle": "Firefly Components",
+      "projectSlogan": "Set de componentes minimalistas y reutilizables",
+      "projectDescription": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V.",
+      "projectTechnologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ],
+      "title": "Firefly Components",
+      "description": "Firefly Components es un pequeño set de componentes reutilizables hechos en React y estilados con la librería Styled Components, usados en las aplicaciones web de Lámparas Estella S.A. de C.V. (Deutsche Übersetzung)",
+      "slogan": "Set de componentes minimalistas y reutilizables (Slogan DE)",
+      "category": "Other",
+      "images": [
+        "/projects/firefly-components/1.webp",
+        "/projects/firefly-components/2.webp",
+        "/projects/firefly-components/3.webp",
+        "/projects/firefly-components/4.webp"
+      ],
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon": "react"
+        },
+        {
+          "name": "Styled Components",
+          "icon": "styledcomponents"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "Github",
+          "icon": "github"
+        },
+        {
+          "name": "Netlify",
+          "icon": "netlify"
+        }
+      ]
+    }
+  ]
+}

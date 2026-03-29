@@ -1,0 +1,128 @@
+---
+// Import necessary components, modules and types
+import MainLayout from '@/layouts/MainLayout.astro'
+import CardBlog from '@components/ui/cards/CardBlog.astro'
+import CardBlogRecent from '@components/ui/cards/CardBlogRecent.astro'
+import CardInsight from '@components/ui/cards/CardInsight.astro'
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import { SITE } from '@data/constants'
+
+// Get all blogs post in French and sort them based on publish date
+
+const frenchBlogEntries = await getCollection('blog', ({ id }) => {
+  return id.startsWith('ru/')
+})
+
+const frenchInsightsEntries = await getCollection('insights', ({ id }) => {
+  return id.startsWith('ru/')
+})
+
+const blogPosts: CollectionEntry<'blog'>[] = frenchBlogEntries.sort(
+  (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+    b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+)
+// Get all insights posts
+const insightPosts: CollectionEntry<'insights'>[] = frenchInsightsEntries
+
+// Separate the most recent post from others
+const mostRecentPost: CollectionEntry<'blog'> = blogPosts[0]
+const otherPosts: CollectionEntry<'blog'>[] = blogPosts.slice(1)
+
+// Define variables for page content
+const title: string = 'Ваш строительный шлюз к совершенству'
+const subTitle: string =
+  'Изучите последние новости, советы и аналитические материалы от ScrewFast, чтобы улучшить свои строительные проекты. От представления продуктов до стратегий управления проектами, наш блог является вашим незаменимым ресурсом по всем вопросам, связанным с инструментами и строительством.'
+const secondTitle: string = 'Перспективы'
+const secondSubTitle: string =
+  'Оставайтесь в курсе последних тенденций и изменений в строительной отрасли благодаря аналитическим материалам команды экспертов ScrewFast.'
+
+const pageTitle: string = `Blog | ${SITE.title}`
+const metaDescription =
+  'Оставайтесь в курсе последних тенденций и изменений в строительной отрасли благодаря аналитическим материалам команды экспертов ScrewFast.'
+const ogTitle = "Blog de l'Industrie de la Construction | ScrewFast"
+---
+
+<MainLayout
+  lang="ru"
+  title={pageTitle}
+  customDescription={metaDescription}
+  customOgTitle={ogTitle}
+  structuredData={{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://screwfast.uk/ru/blog',
+    url: 'https://screwfast.uk/ru/blog',
+    name: 'Blog | ScrewFast',
+    description:
+      'Оставайтесь в курсе последних тенденций и изменений в строительной отрасли благодаря аналитическим материалам команды экспертов ScrewFast.',
+    isPartOf: {
+      '@type': 'WebSite',
+      url: 'https://screwfast.uk/ru',
+      name: 'ScrewFast',
+      description:
+        'ScrewFast предлагает первоклассные строительные инструменты и экспертные услуги, чтобы удовлетворить все ваши потребности в проекте.',
+    },
+    inLanguage: 'ru',
+  }}
+>
+  <section
+    class="mx-auto max-w-[85rem] space-y-8 px-4 pt-16 sm:px-6 lg:px-8 2xl:max-w-full"
+  >
+    <!--Page header-->
+    <div class="mx-auto max-w-3xl text-left sm:text-center">
+      <h1
+        class="block text-4xl font-bold tracking-tight text-balance text-neutral-800 md:text-5xl lg:text-6xl dark:text-neutral-200"
+      >
+        {title}
+      </h1>
+
+      <p
+        class="mt-4 text-lg text-pretty text-neutral-600 dark:text-neutral-400"
+      >
+        {subTitle}
+      </p>
+    </div>
+  </section>
+
+  <section
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    {/* Blog posts grid */}
+    <div class="grid gap-6 lg:grid-cols-2">
+      {
+        otherPosts.map((blogEntry) => (
+          <CardBlog blogEntry={blogEntry} blogLocale="ru" />
+        ))
+      }
+    </div>
+  </section>
+  {/* Most recent blog post */}
+  <section
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    <CardBlogRecent blogEntry={mostRecentPost} recentBlogLocale="ru" />
+  </section>
+  {/* Insights section */}
+  <section
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
+      <h2
+        class="text-2xl font-bold text-neutral-800 md:text-4xl md:leading-tight dark:text-neutral-200"
+      >
+        {secondTitle}
+      </h2>
+      <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
+        {secondSubTitle}
+      </p>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        insightPosts.map((insightEntry) => (
+          <CardInsight insightEntry={insightEntry} insightLocale="ru" />
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>

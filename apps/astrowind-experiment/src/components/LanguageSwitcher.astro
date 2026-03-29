@@ -1,0 +1,21 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const locales = ['en', 'ru', 'uk'] as const;
+// Текущий путь без ведущего слеша и без префикса локали:
+const rawPath = Astro.url.pathname.replace(/^\/(en|ru|uk)(?=\/|$)/, '').replace(/^\/?/, ''); // '' для главной
+---
+
+<nav aria-label="Language switcher">
+  <ul>
+    {
+      locales.map((loc) => (
+        <li>
+          <a href={getRelativeLocaleUrl(loc, rawPath)} lang={loc}>
+            {loc.toUpperCase()}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

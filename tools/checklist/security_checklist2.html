@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Checklist — Безопасность сайтов и веб-приложений</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      margin: 0;
+      padding: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background: #1e1e1e;
+      color: #e0e0e0;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    select, input[type="text"] {
+      padding: 5px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      color: #222;
+    }
+    body.dark select, body.dark input[type="text"] {
+      background: #2a2a2a;
+      color: #f5f5f5;
+      border: 1px solid #555;
+    }
+    button {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn-primary { background: #007bff; color: white; }
+    .btn-secondary { background: #6c757d; color: white; }
+    .btn-success { background: #28a745; color: white; }
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 18px;
+      background: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px;
+      text-align: left;
+    }
+    body.dark th, body.dark td {
+      border: 1px solid #555;
+    }
+    .progress {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2 id="title">Security Checklist — Безопасность сайтов и веб-приложений</h2>
+    <div class="controls">
+      <button class="theme-toggle" id="themeToggle">🌞</button>
+      <select id="langSelect"></select>
+      <button class="btn-primary" id="exportCsv">CSV</button>
+      <button class="btn-secondary" onclick="window.print()" id="printBtn">Print</button>
+    </div>
+  </div>
+  <p id="subtitle">Интерактивный чек-лист с переводами, фильтрацией, экспортом и подсчётом прогресса.</p>
+
+  <input type="text" id="searchInput" placeholder="Search...">
+  <select id="filterSelect"></select>
+
+  <div class="progress" id="progress"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th id="colCategory">Категория</th>
+        <th id="colTask">Задача</th>
+        <th id="colDesc">Описание</th>
+        <th id="colTime">Время (ч)</th>
+      </tr>
+    </thead>
+    <tbody id="taskTable"></tbody>
+  </table>
+
+  <div style="margin-top:10px;">
+    <button class="btn-secondary" id="resetBtn">Сброс</button>
+    <button class="btn-success" id="addBtn">Добавить задачу</button>
+  </div>
+
+<script>
+const translations = {
+  ru: {
+    title: "Security Checklist — Безопасность сайтов и веб-приложений",
+    subtitle: "Интерактивный чек-лист с переводами, фильтрацией, экспортом и подсчётом прогресса.",
+    search: "Поиск...",
+    filter: "Фильтр",
+    print: "Печать",
+    export: "Экспорт CSV",
+    reset: "Сброс",
+    add: "Добавить задачу",
+    category: "Категория",
+    task: "Задача",
+    desc: "Описание",
+    time: "Время (ч)"
+  },
+  en: {
+    title: "Security Checklist — Website and Web App Security",
+    subtitle: "Interactive checklist with translations, filtering, export and progress tracking.",
+    search: "Search...",
+    filter: "Filter",
+    print: "Print",
+    export: "Export CSV",
+    reset: "Reset",
+    add: "Add Task",
+    category: "Category",
+    task: "Task",
+    desc: "Description",
+    time: "Time (h)"
+  },
+  uk: {
+    title: "Security Checklist — Безпека сайтів та веб-застосунків",
+    subtitle: "Інтерактивний чек-ліст з перекладами, фільтрацією, експортом і підрахунком прогресу.",
+    search: "Пошук...",
+    filter: "Фільтр",
+    print: "Друк",
+    export: "Експорт CSV",
+    reset: "Скидання",
+    add: "Додати завдання",
+    category: "Категорія",
+    task: "Завдання",
+    desc: "Опис",
+    time: "Час (год)"
+  },
+  fr: {
+    title: "Security Checklist — Sécurité des sites et applications web",
+    subtitle: "Checklist interactive avec traductions, filtrage, export et suivi de progression.",
+    search: "Recherche...",
+    filter: "Filtre",
+    print: "Imprimer",
+    export: "Exporter CSV",
+    reset: "Réinitialiser",
+    add: "Ajouter une tâche",
+    category: "Catégorie",
+    task: "Tâche",
+    desc: "Description",
+    time: "Temps (h)"
+  },
+  de: {
+    title: "Security Checklist — Sicherheit von Websites und Webanwendungen",
+    subtitle: "Interaktive Checkliste mit Übersetzungen, Filterung, Export und Fortschrittskontrolle.",
+    search: "Suchen...",
+    filter: "Filter",
+    print: "Drucken",
+    export: "CSV exportieren",
+    reset: "Zurücksetzen",
+    add: "Aufgabe hinzufügen",
+    category: "Kategorie",
+    task: "Aufgabe",
+    desc: "Beschreibung",
+    time: "Zeit (Std)"
+  }
+};
+
+// Языки
+const langSelect = document.getElementById("langSelect");
+["ru","en","uk","fr","de"].forEach(l=>{
+  const opt=document.createElement("option");
+  opt.value=l;
+  opt.text=l.toUpperCase();
+  langSelect.appendChild(opt);
+});
+
+function applyLang(lang){
+  const t=translations[lang];
+  document.getElementById("title").innerText=t.title;
+  document.getElementById("subtitle").innerText=t.subtitle;
+  document.getElementById("searchInput").placeholder=t.search;
+  document.getElementById("printBtn").innerText=t.print;
+  document.getElementById("exportCsv").innerText=t.export;
+  document.getElementById("resetBtn").innerText=t.reset;
+  document.getElementById("addBtn").innerText=t.add;
+  document.getElementById("colCategory").innerText=t.category;
+  document.getElementById("colTask").innerText=t.task;
+  document.getElementById("colDesc").innerText=t.desc;
+  document.getElementById("colTime").innerText=t.time;
+}
+
+langSelect.addEventListener("change",()=>{
+  applyLang(langSelect.value);
+});
+
+applyLang("ru");
+
+// Тема
+const themeToggle=document.getElementById("themeToggle");
+themeToggle.addEventListener("click",()=>{
+  document.body.classList.toggle("dark");
+  themeToggle.innerText=document.body.classList.contains("dark")?"🌙":"🌞";
+});
+</script>
+</body>
+</html>

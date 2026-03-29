@@ -1,0 +1,122 @@
+<style>
+/* Стили из ProjectCard / ProjectsSection */
+.gallery-section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
+}
+.project-img-container {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    background: #f3f4f6;
+}
+.project-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    display: block;
+}
+.project-img-container:hover .project-img {
+    transform: scale(1.05);
+}
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--aw-color-text-heading, #111827);
+}
+.project-slogan {
+    font-size: 0.9rem;
+    color: var(--aw-color-text-muted, #6b7280);
+}
+.project-links a {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: rgba(0,0,0,0.05);
+    color: inherit;
+    transition: all 0.2s;
+}
+.project-links a:hover {
+    background: #111827;
+    color: #fff;
+}
+</style>
+
+<section class="gallery-section" id="portfolio">
+    <h2 class="text-3xl font-bold mb-8 text-center" id="gallery-title">Gallery</h2>
+    <div class="gallery-grid" id="gallery-container">
+        <!-- JS inserts content here -->
+    </div>
+</section>
+
+<script type="module">
+    // Загрузка переведенных данных
+    import translations from './gallery.json';
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Определяем текущий язык страницы
+        const htmlLang = document.documentElement.lang || 'en';
+        // Ищем переводы для этого языка, если нет - фоллбэк на английский
+        const langData = translations[htmlLang] || translations['en'];
+
+        const container = document.getElementById("gallery-container");
+        const titleEl = document.getElementById("gallery-title");
+
+        // Можно добавить переводы для самого заголовка:
+        const titleDict = {
+            'en': 'Projects Gallery',
+            'ru': 'Галерея проектов',
+            'uk': 'Галерея проектів',
+            'it': 'Galleria dei Progetti'
+        };
+        titleEl.textContent = titleDict[htmlLang] || titleDict['en'];
+
+        // Рендерим карточки
+        langData.forEach(project => {
+            const card = document.createElement("article");
+            card.className = "project-card";
+
+            let linksHtml = '';
+            if(project.projectRepo) {
+                linksHtml += `<a href="${project.projectRepo}" target="_blank" rel="noopener">Code</a>`;
+            }
+            if(project.projectSite) {
+                linksHtml += `<a href="${project.projectSite}" target="_blank" rel="noopener">Site</a>`;
+            }
+
+            card.innerHTML = `
+                <div class="project-img-container">
+                    <img class="project-img" src="${project.images[0]}" alt="${project.title}" loading="lazy" />
+                </div>
+                <div class="project-info">
+                    <div>
+                        <h3 class="project-title">${project.title}</h3>
+                        <span class="project-slogan">${project.slogan}</span>
+                        <p class="text-sm mt-1 text-gray-500 hidden">${project.description}</p>
+                    </div>
+                    <div class="project-links flex gap-2">
+                        ${linksHtml}
+                    </div>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    });
+</script>

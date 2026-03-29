@@ -1,0 +1,40 @@
+---
+import { useTranslations } from 'astro-i18n-aut';
+import Hero from '@/components/widgets/Hero.astro';
+import Content from '@/components/widgets/Content.astro';
+
+const { t } = useTranslations(Astro.currentLocale);
+
+// Достаём массив проектов
+const projects = t('personal.portfolio.projects');
+---
+
+<Hero
+  id="hero"
+  title={t('personal.hero.title')}
+  tagline={t('personal.hero.tagline')}
+  callToAction={{
+    text: t('personal.hero.cta.text'),
+    href: t('personal.hero.cta.href'),
+  }}
+>
+  <Fragment slot="subtitle">{t('personal.hero.subtitle')}</Fragment>
+</Hero>
+
+{
+  projects.map((project, index) => (
+    <Content
+      id={`project-${index + 1}`}
+      title={project.title}
+      subtitle={project.description}
+      isReversed={index % 2 === 1}
+      items={[
+        {
+          title: project.title,
+          description: project.role,
+        },
+      ]}
+      image={project.image}
+    />
+  ))
+}

@@ -1,0 +1,265 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+import { getHeaderData } from '~/navigation';
+import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
+
+const locale = getLocaleFromUrl(Astro.url);
+const headerData = getHeaderData(locale);
+const t = useTranslations(locale); // Передбачається, що у вас є цей хелпер
+
+const metadata = {
+  title: 'SaaS Лендінг — AstroWind',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          type: 'ghost',
+          text: 'Увійти',
+          href: '#',
+        },
+        {
+          type: 'primary',
+          text: 'Реєстрація',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <Hero2
+    tagline="SaaS Веб Демо"
+    callToAction={{ text: 'Почати', href: 'https://github.com/onwidget/astrowind' }}
+    callToAction2={{ text: 'Дізнатися більше', href: '#features' }}
+    image={{
+      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AstroWind Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      Спростіть веб-дизайн з AstroWind: <br /> ваш ідеальний <span class="text-accent dark:text-white highlight"
+        >SaaS</span
+      > помічник<br />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Покращуйте процес створення вашого сайту за допомогою SaaS-рішень <span class="font-semibold">AstroWind</span>.</span
+      >
+      Безшовно поєднуйте потужність Astro 3.0 та Tailwind CSS для створення сайтів, які резонують з вашим брендом та аудиторією.
+    </Fragment>
+  </Hero2>
+
+  <Features
+    id="features"
+    title="Чому варто обрати AstroWind?"
+    subtitle="Кожна з наступних функцій підсилює ціннісну пропозицію AstroWind."
+    columns={2}
+    items={[
+      {
+        title: 'Інтеграція Astro 3.0 та Tailwind CSS',
+        description:
+          'Потужне поєднання, що покращує як процес розробки, так і досвід кінцевого користувача. Дозволяє створювати динамічні та візуально вражаючі сайти.',
+        icon: 'tabler:layers-union',
+      },
+      {
+        title: 'Універсальний дизайн для стартапів та бізнесу',
+        description: 'Легко налаштовуйте AstroWind відповідно до унікального брендингу та ідентичності вашого підприємства.',
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Проста кастомізація для портфоліо',
+        description:
+          'Інтуїтивно зрозуміле налаштування дозволяє легко демонструвати ваші роботи, кейси та досягнення.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Оптимізовані лендінги та блоги',
+        description: 'Сторінки стратегічно розроблені для залучення відвідувачів, а функція створення блогу допомагає ділитися думками.',
+        icon: 'tabler:podium',
+      },
+      {
+        title: 'Швидке завантаження та готовий код',
+        description: 'Використання Astro 3.0 гарантує блискавичну швидкість. Код відповідає кращим практикам SEO та UX.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'SEO-оптимізована структура',
+        description: 'Чистий код, семантична розмітка та швидке завантаження забезпечують високі позиції в пошукових системах.',
+        icon: 'tabler:eyeglass',
+      },
+    ]}
+  />
+
+  <Content
+    title="Варіанти використання"
+    subtitle="Дізнайтеся, як універсальний шаблон AstroWind стає ідеальним рішенням для різних завдань, забезпечуючи успіх вашого проекту."
+    isReversed
+    items={[
+      {
+        title: 'Опис:',
+        description:
+          'Ви стартап з великими мріями? AstroWind прискорює ваш успіх. Наш шаблон створює бездоганну онлайн-присутність, залучаючи інвесторів та клієнтів з першого дня.',
+      },
+      {
+        title: 'Переваги:',
+        description: `Швидке створення професійних сайтів без великих витрат часу. <br /> Створення незабутнього першого враження. <br /> Бездоганна робота на всіх пристроях. <br /> Залучення інвесторів через інтуїтивну навігацію.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
+      alt: 'Startup Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Історії успіху стартапів: <br /><span class="text-2xl">Запуск з AstroWind</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Опис:',
+        description: `Для SaaS-бізнесу досвід користувача є ключовим. AstroWind покращує демонстрацію ваших рішень, роблячи їх інтуїтивно зрозумілими та ефективними.`,
+      },
+      {
+        title: 'Переваги:',
+        description: `Орієнтований на користувача дизайн. <br /> Ефективна комунікація складних функцій через візуальні засоби. <br /> Пріоритет на потребах користувача через чітку навігацію. <br /> Стратегічно розміщені заклики до дії (CTA).`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
+      alt: 'SaaS Businesses Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        SaaS вітрина: <br /><span class="text-2xl">Оптимізація досвіду користувача</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Pricing
+    title="Гнучкі тарифні плани"
+    prices={[
+      {
+        title: 'Безкоштовний',
+        subtitle: 'Доступ до основних функцій та широкого вибору шаблонів',
+        price: '0',
+        period: '/ місяць',
+        callToAction: {
+          targetBlank: true,
+          text: 'Почати безкоштовно',
+          href: '#',
+        },
+      },
+      {
+        title: 'Pro',
+        subtitle: 'Преміум шаблони та розширена кастомізація',
+        price: 15,
+        period: '/ місяць',
+        callToAction: {
+          targetBlank: true,
+          text: 'Оновити до Pro',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'популярний',
+      },
+      {
+        title: 'Enterprise',
+        subtitle: 'Індивідуальні рішення для великомасштабних проектів',
+        price: 45,
+        period: '/ місяць',
+        callToAction: {
+          targetBlank: true,
+          text: 'Відкрити Enterprise функції',
+          href: '#',
+        },
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Поширені запитання"
+    items={[
+      {
+        title: 'Чи сумісний AstroWind з останніми версіями Astro та Tailwind CSS?',
+        description:
+          'Так, AstroWind розроблений для повної сумісності з останніми версіями цих технологій, що дозволяє використовувати всі їхні можливості.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Чи можу я використовувати AstroWind для комерційних проектів?',
+        description: `Звичайно! AstroWind універсальний і підходить як для особистих портфоліо, так і для запуску стартапів або маркетингових сайтів компаній.`,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <Steps2
+    title="Зв'яжіться з нами"
+    subtitle="Маєте запитання? Напишіть нам через форму нижче. Ми тут, щоб допомогти!"
+    callToAction={{
+      text: 'Написати нам',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'Email',
+        description: 'contact@support.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Телефон',
+        description: '+1 (234) 567-890',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Ми в соцмережах',
+        description: '@example',
+        icon: 'tabler:brand-twitter',
+      },
+    ]}
+  />
+
+  <BlogLatestPosts
+    id="blog"
+    title="Будьте в курсі новин з блогом AstroWind"
+    information={`Досліджуйте нашу колекцію статей, посібників та туторіалів з веб-розробки та трендів дизайну.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

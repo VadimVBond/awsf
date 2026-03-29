@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Checklist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { transition: background-color 0.3s, color 0.3s; }
+    .dark body { background-color: #1a202c; color: #f1f5f9; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 p-6">
+  <div class="flex justify-between items-center mb-4">
+    <h1 id="title" class="text-2xl font-bold">Security Checklist — Безопасность сайтов и веб-приложений</h1>
+    <div class="flex items-center gap-2">
+      <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+        <span id="themeIcon">🌞</span>
+      </button>
+      <select id="langSelect" class="border rounded p-1 text-gray-900">
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+        <option value="uk">Українська</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+      </select>
+      <button id="exportCsv" class="bg-blue-600 text-white px-3 py-1 rounded">Export CSV</button>
+      <button onclick="window.print()" class="bg-gray-600 text-white px-3 py-1 rounded">Print</button>
+    </div>
+  </div>
+  <p id="subtitle" class="mb-4">Интерактивный чек-лист с переводами, фильтрацией, экспортом и подсчётом прогресса.</p>
+
+  <div class="flex gap-4 items-center mb-4">
+    <input type="text" id="searchInput" placeholder="Search..." class="border rounded p-2 w-1/3 text-gray-900">
+    <select id="filterSelect" class="border rounded p-2 text-gray-900">
+      <option value="all">Все</option>
+      <option value="backend">Backend</option>
+      <option value="frontend">Frontend</option>
+      <option value="mkdocs">MkDocs</option>
+      <option value="monorepo">Monorepo</option>
+      <option value="common">Общие меры</option>
+    </select>
+    <div class="flex-1">
+      <span id="progressText">Выполнено: 0 из 0 — 0%</span>
+      <div class="w-full bg-gray-300 rounded h-2 mt-1">
+        <div id="progressBar" class="bg-green-500 h-2 rounded w-0"></div>
+      </div>
+    </div>
+  </div>
+
+  <table class="w-full border-collapse border border-gray-400 dark:border-gray-600">
+    <thead>
+      <tr class="bg-gray-200 dark:bg-gray-700">
+        <th class="p-2">✅</th>
+        <th class="p-2" id="thCategory">Категория</th>
+        <th class="p-2" id="thTask">Задача</th>
+        <th class="p-2" id="thDesc">Описание</th>
+        <th class="p-2" id="thTime">Время (ч)</th>
+      </tr>
+    </thead>
+    <tbody id="taskTable"></tbody>
+  </table>
+
+  <p id="timeSummary" class="mt-4">Пройдено времени: 0 ч — Оценка выполнения: 0 дн</p>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "Security Checklist — Безопасность сайтов и веб-приложений",
+        subtitle: "Интерактивный чек-лист с переводами, фильтрацией, экспортом и подсчётом прогресса.",
+        thCategory: "Категория", thTask: "Задача", thDesc: "Описание", thTime: "Время (ч)",
+        progress: (done, total, percent) => `Выполнено: ${done} из ${total} — ${percent}%`,
+        timeSummary: (done, days) => `Пройдено времени: ${done} ч — Оценка выполнения: ${days} дн`
+      },
+      en: {
+        title: "Security Checklist — Website & Web App Security",
+        subtitle: "Interactive checklist with translations, filtering, export, and progress tracking.",
+        thCategory: "Category", thTask: "Task", thDesc: "Description", thTime: "Time (h)",
+        progress: (done, total, percent) => `Completed: ${done} of ${total} — ${percent}%`,
+        timeSummary: (done, days) => `Time spent: ${done} h — Estimated: ${days} days`
+      },
+      uk: {
+        title: "Security Checklist — Безпека сайтів та веб-додатків",
+        subtitle: "Інтерактивний чек-лист з перекладом, фільтрацією, експортом та підрахунком прогресу.",
+        thCategory: "Категорія", thTask: "Завдання", thDesc: "Опис", thTime: "Час (год)",
+        progress: (done, total, percent) => `Виконано: ${done} з ${total} — ${percent}%`,
+        timeSummary: (done, days) => `Пройдено часу: ${done} год — Оцінка виконання: ${days} дн`
+      },
+      fr: {
+        title: "Security Checklist — Sécurité des sites et applications web",
+        subtitle: "Checklist interactive avec traductions, filtrage, export et suivi de progression.",
+        thCategory: "Catégorie", thTask: "Tâche", thDesc: "Description", thTime: "Temps (h)",
+        progress: (done, total, percent) => `Réalisé: ${done} sur ${total} — ${percent}%`,
+        timeSummary: (done, days) => `Temps passé: ${done} h — Estimé: ${days} j`
+      },
+      de: {
+        title: "Security Checklist — Sicherheit von Websites und Webanwendungen",
+        subtitle: "Interaktive Checkliste mit Übersetzungen, Filterung, Export und Fortschrittsverfolgung.",
+        thCategory: "Kategorie", thTask: "Aufgabe", thDesc: "Beschreibung", thTime: "Zeit (Std)",
+        progress: (done, total, percent) => `Erledigt: ${done} von ${total} — ${percent}%`,
+        timeSummary: (done, days) => `Verbrauchte Zeit: ${done} Std — Geschätzt: ${days} Tage`
+      }
+    };
+
+    const tasks = [
+      {cat:'backend', task:'CSRF защита', desc:'Использовать middleware (Django/Flask/FastAPI)', hours:2},
+      {cat:'backend', task:'SQL Injection', desc:'Использовать ORM, подготовленные запросы', hours:3},
+      {cat:'frontend', task:'XSS', desc:'CSP, sanitize HTML', hours:2},
+      {cat:'frontend', task:'Cookies', desc:'HttpOnly, Secure, SameSite', hours:1},
+      {cat:'mkdocs', task:'Плагины', desc:'Минимизировать сторонние плагины', hours:1},
+      {cat:'monorepo', task:'Секреты', desc:'Хранить только в .env или Secret Manager', hours:2},
+      {cat:'monorepo', task:'Docker security', desc:'Не использовать latest, ограничить права', hours:2},
+      {cat:'common', task:'HTTPS', desc:'Включить всегда', hours:1},
+      {cat:'common', task:'Rate limiting', desc:'Ограничение запросов на IP', hours:1},
+      {cat:'common', task:'Логи', desc:'Не хранить пароли и токены', hours:1},
+    ];
+
+    const table = document.getElementById('taskTable');
+    const progressText = document.getElementById('progressText');
+    const progressBar = document.getElementById('progressBar');
+    const timeSummary = document.getElementById('timeSummary');
+
+    function renderTasks() {
+      table.innerHTML = '';
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const filter = document.getElementById('filterSelect').value;
+      let doneCount = 0;
+      tasks.forEach((t, i) => {
+        if ((filter==='all'||t.cat===filter) && (t.task.toLowerCase().includes(search)||t.desc.toLowerCase().includes(search))) {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td class='p-2 text-center'><input type='checkbox' data-idx='${i}' ${t.done?'checked':''}></td>
+            <td class='p-2'>${t.cat}</td>
+            <td class='p-2'>${t.task}</td>
+            <td class='p-2'>${t.desc}</td>
+            <td class='p-2'>${t.hours}</td>
+          `;
+          table.appendChild(row);
+          if (t.done) doneCount++;
+        }
+      });
+      const total = tasks.length;
+      const percent = total?Math.round(doneCount/total*100):0;
+      const lang = document.getElementById('langSelect').value;
+      progressText.textContent = translations[lang].progress(doneCount,total,percent);
+      progressBar.style.width = percent+'%';
+      const days = (doneCount*2.5/10).toFixed(1);
+      timeSummary.textContent = translations[lang].timeSummary(doneCount, days);
+    }
+
+    table.addEventListener('change', e => {
+      if (e.target.type==='checkbox') {
+        tasks[e.target.dataset.idx].done = e.target.checked;
+        renderTasks();
+      }
+    });
+    document.getElementById('searchInput').addEventListener('input', renderTasks);
+    document.getElementById('filterSelect').addEventListener('change', renderTasks);
+
+    document.getElementById('themeToggle').addEventListener('click', e => {
+      document.documentElement.classList.toggle('dark');
+      const icon = document.getElementById('themeIcon');
+      icon.textContent = document.documentElement.classList.contains('dark') ? '🌙' : '🌞';
+    });
+
+    document.getElementById('langSelect').addEventListener('change', e => {
+      const lang = e.target.value;
+      document.getElementById('title').textContent = translations[lang].title;
+      document.getElementById('subtitle').textContent = translations[lang].subtitle;
+      document.getElementById('thCategory').textContent = translations[lang].thCategory;
+      document.getElementById('thTask').textContent = translations[lang].thTask;
+      document.getElementById('thDesc').textContent = translations[lang].thDesc;
+      document.getElementById('thTime').textContent = translations[lang].thTime;
+      renderTasks();
+    });
+
+    document.getElementById('exportCsv').addEventListener('click', () => {
+      const rows = [['Категория','Задача','Описание','Время (ч)','Выполнено']];
+      tasks.forEach(t=>rows.push([t.cat,t.task,t.desc,t.hours,t.done?'Да':'Нет']));
+      const csv = rows.map(r=>r.join(',')).join('\n');
+      const blob = new Blob([csv], {type:'text/csv'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'security-checklist.csv';
+      a.click();
+    });
+
+    renderTasks();
+  </script>
+</body>
+</html>

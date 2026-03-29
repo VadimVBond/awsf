@@ -1,0 +1,118 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
+
+const { t, tList } = useTranslations(getLocaleFromUrl(Astro.url));
+
+const metadata = {
+  title: t('personal.metadata.title'),
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header links={t('personal.header.links')} actions={t('personal.header.actions')} isSticky showToggleTheme />
+  </Fragment>
+
+  <!-- Hero Widget -->
+  <Hero
+    id="hero"
+    title={t('personal.hero.title')}
+    tagline={t('personal.hero.tagline')}
+    callToAction={t('personal.hero.cta')}
+  >
+    <Fragment slot="subtitle">
+      {t('personal.hero.subtitle')}
+    </Fragment>
+  </Hero>
+
+  <!-- About Content -->
+  <Content id="about" items={t('personal.about.items')} image={t('personal.about.image')}>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{t('personal.about.title')}</h3>
+      <p>{t('personal.about.paragraph1')}</p>
+      <br />
+      <p>{t('personal.about.paragraph2')}</p>
+      <br />
+      <p>{t('personal.about.paragraph3')}</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Resume Steps -->
+  <Steps
+    id="resume"
+    title={t('personal.resume.work.title')}
+    items={t('personal.resume.work.items')}
+    classes={{ container: 'max-w-3xl' }}
+  />
+  <Steps
+    id="education"
+    title={t('personal.resume.education.title')}
+    items={t('personal.resume.education.items')}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Skills -->
+  <Features3
+    title={t('personal.skills.title')}
+    subtitle={t('personal.skills.subtitle')}
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={t('personal.skills.items')}
+  />
+
+  <!-- Portfolio -->
+  <Content
+    id="portfolio"
+    title={t('personal.portfolio.title')}
+    subtitle={t('personal.portfolio.subtitle')}
+    isReversed
+    items={t('personal.portfolio.items')}
+    image={t('personal.portfolio.image')}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        {t('personal.portfolio.project1.title')}
+      </h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- More portfolio projects would follow similarly -->
+
+  <!-- Testimonials -->
+  <Testimonials
+    title={t('personal.testimonials.title')}
+    subtitle={t('personal.testimonials.subtitle')}
+    testimonials={t('personal.testimonials.items')}
+  />
+
+  <!-- Call To Action -->
+  <CallToAction
+    title={t('personal.cta.title')}
+    subtitle={t('personal.cta.subtitle')}
+    callToAction={t('personal.cta.action')}
+  />
+
+  <!-- Blog Section -->
+  <BlogLatestPosts id="blog" title={t('personal.blog.title')} information={t('personal.blog.information')}>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

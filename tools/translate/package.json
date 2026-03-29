@@ -1,0 +1,9 @@
+{
+  "name": "translate-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "@vitalets/google-translate-api": "^8.0.0"
+  }
+}

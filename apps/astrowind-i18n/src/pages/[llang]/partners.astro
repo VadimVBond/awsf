@@ -1,0 +1,13 @@
+---
+import PartnersPromo from '~/components/partners/PartnersPromo.astro';
+import PartnersFAQ from '~/components/partners/PartnersFAQ.astro';
+
+const partners = Astro.locals.t('partners');
+---
+
+<h1>{partners.title}</h1>
+<p>{partners.description}</p>
+
+{partners.promo && <PartnersPromo {...partners.promo} />}
+
+{partners.faq.length > 0 && <PartnersFAQ items={partners.faq} />}

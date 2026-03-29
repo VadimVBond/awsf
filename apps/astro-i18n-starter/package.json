@@ -1,0 +1,44 @@
+{
+    "name": "astro-i18n-starter",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Multilingual Astro starter with URL localization and i18n support",
+    "author": {
+        "name": "Nik Klemenc",
+        "url": "https://klemenc.si"
+    },
+    "homepage": "https://klemenc.si",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Scorpio3310/astro-i18n-starter"
+    },
+    "license": "MIT",
+    "keywords": [
+        "astro",
+        "i18n",
+        "internationalization",
+        "multilingual",
+        "url-localization",
+        "seo",
+        "tailwindcss",
+        "static-site-generator"
+    ],
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/mdx": "^4.3.5",
+        "@astrojs/sitemap": "^3.6.0",
+        "@astrojs/svelte": "^7.1.1",
+        "@tailwindcss/vite": "^4.1.13",
+        "astro": "^5.13.9",
+        "sharp": "^0.34.4",
+        "svelte": "^5.39.3",
+        "tailwindcss": "^4.1.13",
+        "typescript": "^5.9.2"
+    }
+}

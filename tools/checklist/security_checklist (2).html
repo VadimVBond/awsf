@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Security Checklist — Безопасность сайтов и веб-приложений</title>
+  <style>
+    :root{ --bg:#fbfbfb; --panel:#ffffff; --text:#0b1220; --muted:#5b6b7a; --accent:#16a34a; --glass:#eef2f7 }
+    body{font-family:Inter, Roboto, Arial, sans-serif; margin:0; padding:24px; background:var(--bg); color:var(--text); -webkit-print-color-adjust:exact; color-adjust:exact}
+    .dark{ --bg:#0b1220; --panel:#0f1724; --text:#e6eef6; --muted:#9fb0c3; --accent:#34d399; --glass:#0b1a2b }
+
+    .container{max-width:1100px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+    h1{font-size:20px;margin:0}
+    .controls{display:flex;gap:8px;align-items:center}
+
+    button, select, input[type="text"]{font-size:14px}
+    select,input[type="text"]{padding:8px;border-radius:8px;border:1px solid #ccd7e0;color:var(--text);background:var(--panel)}
+    .dark select,.dark input[type="text"]{border:1px solid #22303f;background:#081018}
+
+    .theme-btn{width:40px;height:40px;border-radius:999px;border:none;display:inline-flex;align-items:center;justify-content:center;font-size:18px;background:#f1f5f9;cursor:pointer}
+    .dark .theme-btn{background:#071022}
+
+    .panel{background:var(--panel);padding:14px;border-radius:10px;box-shadow:0 1px 2px rgba(8,15,22,0.04);}
+    .row{display:flex;gap:12px;align-items:center}
+
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:10px;border-bottom:1px solid rgba(15,23,42,0.06);text-align:left}
+    .dark th,.dark td{border-bottom:1px solid rgba(255,255,255,0.04)}
+
+    .muted{color:var(--muted)}
+    .accent{color:var(--accent)}
+
+    .progress-wrap{display:flex;align-items:center;gap:12px}
+    .progress-bar{height:10px;background:rgba(0,0,0,0.06);border-radius:999px;overflow:hidden;width:320px}
+    .progress-fill{height:100%;background:var(--accent);width:0%}
+
+    .small{font-size:13px}
+    .actions{display:flex;gap:8px}
+
+    /* print adjustments: keep text in selected language and apply theme colors */
+    @media print{
+      body{background:var(--bg);color:var(--text)}
+      .theme-btn{display:none}
+      .controls select, .controls button{display:inline}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1 id="title">Security Checklist — Безопасность сайтов и веб-приложений</h1>
+        <div class="muted small" id="subtitle">Интерактивный чек-лист с переводами, фильтрацией, экспортом и подсчётом прогресса.</div>
+      </div>
+
+      <div class="controls">
+        <button id="themeBtn" class="theme-btn" title="Toggle theme">🌞</button>
+
+        <select id="langSelect" aria-label="language selector" title="Язык">
+          <option value="ru">🇷🇺 Русский</option>
+          <option value="uk">🇺🇦 Українська</option>
+          <option value="en">🇬🇧 English</option>
+          <option value="fr">🇫🇷 Français</option>
+          <option value="de">🇩🇪 Deutsch</option>
+        </select>
+
+        <button id="exportCsv" class="panel small" title="Export CSV">Export CSV</button>
+        <button id="printBtn" class="panel small" title="Print">Print</button>
+      </div>
+    </header>
+
+    <div class="panel">
+      <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div style="display:flex;gap:8px;align-items:center;flex:1">
+          <input id="searchInput" type="text" placeholder="Search..." style="width:320px" />
+
+          <select id="filterSelect" style="min-width:160px">
+            <option value="all">All categories</option>
+          </select>
+        </div>
+
+        <div class="progress-wrap small">
+          <div id="progressText">Выполнено: 0 из 0 — 0%</div>
+          <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+        </div>
+      </div>
+
+      <div style="overflow:auto">
+        <table aria-label="checklist table">
+          <thead>
+            <tr>
+              <th style="width:60px">✅</th>
+              <th id="thCategory">Категория</th>
+              <th id="thName">Задача</th>
+              <th id="thDesc">Описание</th>
+              <th id="thTime">Время (ч)</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+        <div class="small muted" id="timeSummary">Пройдено времени: 0 ч — Оценка выполнения: 0 дн</div>
+        <div class="actions">
+          <button id="resetBtn" class="small">Сброс</button>
+          <button id="addBtn" class="small">Добавить задачу</button>
+        </div>
+      </div>
+    </div>
+
+    <footer style="margin-top:12px;font-size:12px;color:var(--muted)">Файл создан для интеграции в репозиторий — адаптируй под свои правила и CI/CD.</footer>
+  </div>
+
+<script>
+// === translations ===
+const i18n = {
+  ru: {
+    title: 'Security Checklist — Безопасность сайтов и веб-приложений',
+    subtitle: 'Интерактивный чек-лист с переводами, фильтрацией, экспортом и подсчётом прогресса.',
+    search: 'Поиск...', filterAll: 'Все', progress: (done,total,percent) => `Выполнено: ${done} из ${total} — ${percent}%`,
+    timeSummary: (hours,days) => `Пройдено времени: ${hours} ч — Оценка выполнения: ${days} дн`,
+    thCategory:'Категория', thName:'Задача', thDesc:'Описание', thTime:'Время (ч)',
+    add: 'Добавить задачу', reset:'Сброс', export:'Экспорт CSV', print:'Печать'
+  },
+  uk: {
+    title:'Security Checklist — Безпека сайтів та веб-додатків',
+    subtitle:'Інтерактивний чек-лист з перекладами, фільтрацією, експортом і підрахунком прогресу.',
+    search:'Пошук...', filterAll:'Всі', progress:(done,total,percent)=>`Виконано: ${done} з ${total} — ${percent}%`,
+    timeSummary:(hours,days)=>`Пройдений час: ${hours} год — Оцінка: ${days} дн`,
+    thCategory:'Категорія', thName:'Завдання', thDesc:'Опис', thTime:'Час (год)',
+    add:'Додати завдання', reset:'Скинути', export:'Експорт CSV', print:'Друк'
+  },
+  en: {
+    title:'Security Checklist — Website & Web App Security',
+    subtitle:'Interactive checklist with translations, filtering, export and progress tracking.',
+    search:'Search...', filterAll:'All', progress:(done,total,percent)=>`Completed: ${done} of ${total} — ${percent}%`,
+    timeSummary:(hours,days)=>`Time spent: ${hours} h — Estimate: ${days} days`,
+    thCategory:'Category', thName:'Task', thDesc:'Description', thTime:'Time (h)',
+    add:'Add Task', reset:'Reset', export:'Export CSV', print:'Print'
+  },
+  fr: {
+    title:'Security Checklist — Sécurité des sites et applications web',
+    subtitle:'Checklist interactive avec traductions, filtrage, export et suivi de progression.',
+    search:'Recherche...', filterAll:'Toutes', progress:(done,total,percent)=>`Réalisé: ${done} sur ${total} — ${percent}%`,
+    timeSummary:(hours,days)=>`Temps écoulé: ${hours} h — Est.: ${days} j`,
+    thCategory:'Catégorie', thName:'Tâche', thDesc:'Description', thTime:'Temps (h)',
+    add:'Ajouter tâche', reset:'Réinitialiser', export:'Exporter CSV', print:'Imprimer'
+  },
+  de: {
+    title:'Security Checklist — Sicherheit von Websites und Webanwendungen',
+    subtitle:'Interaktive Checkliste mit Übersetzungen, Filterung, Export und Fortschrittsverfolgung.',
+    search:'Suchen...', filterAll:'Alle', progress:(done,total,percent)=>`Erledigt: ${done} von ${total} — ${percent}%`,
+    timeSummary:(hours,days)=>`Verbrauchte Zeit: ${hours} Std — Schätzung: ${days} Tage`,
+    thCategory:'Kategorie', thName:'Aufgabe', thDesc:'Beschreibung', thTime:'Zeit (Std)',
+    add:'Aufgabe hinzufügen', reset:'Zurücksetzen', export:'CSV exportieren', print:'Drucken'
+  }
+};
+
+// === initial multilingual tasks ===
+const initialData = [
+  {id:'t1', category:'backend', name:{ru:'CSRF защита',uk:'Захист CSRF',en:'CSRF protection',fr:'Protection CSRF',de:'CSRF-Schutz'},
+    desc:{ru:'Использовать middleware (Django/Flask/FastAPI)',uk:'Використовувати middleware (Django/Flask/FastAPI)',en:'Use middleware (Django/Flask/FastAPI)',fr:'Utiliser middleware (Django/Flask/FastAPI)',de:'Middleware verwenden (Django/Flask/FastAPI)'}, time:2},
+  {id:'t2', category:'backend', name:{ru:'SQL Injection',uk:"SQL ін'єкції",en:'SQL Injection',fr:'Injection SQL',de:'SQL-Injection'},
+    desc:{ru:'Использовать ORM, parametrized queries',uk:'Використовувати ORM, parametrized queries',en:'Use ORM, parametrized queries',fr:'Utiliser ORM, requêtes paramétrées',de:'ORM nutzen, parametrisierte Queries'}, time:1.5},
+  {id:'t3', category:'frontend', name:{ru:'XSS / Санитизация',uk:'XSS / Санітизація',en:'XSS / Sanitization',fr:'XSS / Assainissement',de:'XSS / Sanitization'},
+    desc:{ru:'CSP, sanitize raw HTML',uk:'CSP, sanitize raw HTML',en:'CSP, sanitize raw HTML',fr:'CSP, nettoyer le HTML brut',de:'CSP, rohes HTML bereinigen'}, time:1},
+  {id:'t4', category:'frontend', name:{ru:'Cookies: HttpOnly / Secure',uk:'Cookies: HttpOnly / Secure',en:'Cookies: HttpOnly / Secure',fr:'Cookies: HttpOnly / Secure',de:'Cookies: HttpOnly / Secure'},
+    desc:{ru:'Настроить SameSite, Secure, HttpOnly',uk:'Налаштувати SameSite, Secure, HttpOnly',en:'Set SameSite, Secure, HttpOnly',fr:'Configurer SameSite, Secure, HttpOnly',de:'SameSite, Secure, HttpOnly setzen'}, time:0.5},
+  {id:'t5', category:'mkdocs', name:{ru:'Проверка плагинов MkDocs',uk:'Перевірка плагінів MkDocs',en:'MkDocs plugins review',fr:'Vérifier plugins MkDocs',de:'MkDocs-Plugins prüfen'},
+    desc:{ru:'Минимизировать 3rd-party плагины',uk:'Мінімізувати сторонні плагіни',en:'Minimize 3rd-party plugins',fr:'Minimiser les plugins tiers',de:'Drittanbieter-Plugins minimieren'}, time:0.5},
+  {id:'t6', category:'monorepo', name:{ru:'Управление секретами',uk:'Управління секретами',en:'Secrets management',fr:'Gestion des secrets',de:'Secrets-Management'},
+    desc:{ru:'Использовать Secret Manager, не хранить в VCS',uk:'Використовувати Secret Manager, не зберігати у VCS',en:'Use Secret Manager, do not store in VCS',fr:'Utiliser Secret Manager, ne pas stocker dans VCS',de:'Secret Manager nutzen, nicht im VCS speichern'}, time:2},
+  {id:'t7', category:'monorepo', name:{ru:'Docker best practices',uk:'Docker best practices',en:'Docker best practices',fr:'Bonnes pratiques Docker',de:'Docker Best Practices'},
+    desc:{ru:'Не использовать image:latest, минимизировать слои',uk:'Не використовувати image:latest, мінімізувати шари',en:'Avoid image:latest, minimize layers',fr:'Éviter image:latest, minimiser les couches',de:'Kein image:latest nutzen, Schichten minimieren'}, time:1},
+  {id:'t8', category:'general', name:{ru:'HTTPS everywhere',uk:'HTTPS повсюди',en:'HTTPS everywhere',fr:'HTTPS partout',de:'HTTPS überall'},
+    desc:{ru:"Let's Encrypt / Cloudflare, HSTS",uk:"Let's Encrypt / Cloudflare, HSTS",en:"Let's Encrypt / Cloudflare, HSTS",fr:"Let's Encrypt / Cloudflare, HSTS",de:"Let's Encrypt / Cloudflare, HSTS"}, time:0.5},
+  {id:'t9', category:'general', name:{ru:'Rate limiting',uk:'Rate limiting',en:'Rate limiting',fr:'Limitation de débit',de:'Rate limiting'},
+    desc:{ru:'DRF throttling, FastAPI rate limit libs',uk:'DRF throttling, FastAPI rate limit libs',en:'DRF throttling, FastAPI rate limit libs',fr:'DRF throttling, bibliothèques limitant le débit',de:'DRF throttling, FastAPI Rate-Limit Libs'}, time:1},
+  {id:'t10', category:'general', name:{ru:'Логирование',uk:'Логування',en:'Logging',fr:'Journalisation',de:'Logging'},
+    desc:{ru:'Исключать пароли/токены, централизовать ошибки',uk:'Не логувати паролі/токени',en:'Exclude passwords/tokens from logs',fr:'Exclure mots de passe / tokens des logs',de:'Passwörter/Tokens in Logs ausschließen'}, time:1}
+];
+
+const STORAGE_KEY = 'security_checklist_v3';
+let state = null;
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return initialData.map(it=>({...it, done:false}));
+    const parsed = JSON.parse(raw);
+    // if structure mismatch, fallback
+    if(!Array.isArray(parsed)) return initialData.map(it=>({...it, done:false}));
+    return parsed;
+  }catch(e){console.error(e); return initialData.map(it=>({...it, done:false}));}
+}
+
+function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+
+// --- DOM refs ---
+const tableBody = document.getElementById('tableBody');
+const searchInput = document.getElementById('searchInput');
+const filterSelect = document.getElementById('filterSelect');
+const progressText = document.getElementById('progressText');
+const progressFill = document.getElementById('progressFill');
+const progressContainer = document.getElementById('progressText');
+const timeSummary = document.getElementById('timeSummary');
+const langSelect = document.getElementById('langSelect');
+const themeBtn = document.getElementById('themeBtn');
+
+// initialize filter options (categories) dynamically from data
+function buildCategoryOptions(lang){
+  const cats = Array.from(new Set(initialData.map(i=>i.category)));
+  filterSelect.innerHTML='';
+  const optAll = document.createElement('option'); optAll.value='all'; optAll.textContent=i18n[lang].filterAll || 'All'; filterSelect.appendChild(optAll);
+  for(const c of cats){
+    const opt = document.createElement('option'); opt.value=c; opt.textContent = localizeCategory(c, lang); filterSelect.appendChild(opt);
+  }
+}
+
+function localizeCategory(cat, lang){
+  const map = {
+    backend: {ru:'Backend', en:'Backend', uk:'Backend', fr:'Backend', de:'Backend'},
+    frontend: {ru:'Frontend', en:'Frontend', uk:'Frontend', fr:'Frontend', de:'Frontend'},
+    mkdocs: {ru:'MkDocs', en:'MkDocs', uk:'MkDocs', fr:'MkDocs', de:'MkDocs'},
+    monorepo: {ru:'Monorepo', en:'Monorepo', uk:'Monorepo', fr:'Monorepo', de:'Monorepo'},
+    general: {ru:'Общие меры', en:'General', uk:'Загальні', fr:'Général', de:'Allgemein'}
+  };
+  return (map[cat] && map[cat][lang]) ? map[cat][lang] : cat;
+}
+
+function formatName(item, lang){ return (item.name && item.name[lang]) ? item.name[lang] : item.name['en'] || Object.values(item.name)[0]; }
+function formatDesc(item, lang){ return (item.desc && item.desc[lang]) ? item.desc[lang] : item.desc['en'] || Object.values(item.desc)[0]; }
+
+// render visible rows based on search/filter
+function render(){
+  const lang = langSelect.value;
+  tableBody.innerHTML = '';
+  const q = (searchInput.value||'').toLowerCase();
+  const filter = filterSelect.value;
+
+  let visible = state.filter(it => (filter==='all' || it.category===filter));
+  visible = visible.filter(it => {
+    const hay = (formatName(it,lang)+' '+formatDesc(it,lang)).toLowerCase();
+    return hay.includes(q);
+  });
+
+  for(const it of visible){
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="width:60px;text-align:center"><input type="checkbox" data-id="${it.id}" ${it.done? 'checked':''}></td>
+      <td>${localizeCategory(it.category, lang)}</td>
+      <td><strong>${escapeHtml(formatName(it,lang))}</strong></td>
+      <td>${escapeHtml(formatDesc(it,lang))}</td>
+      <td style="width:120px"><input type="number" step="0.5" min="0" data-id-time="${it.id}" value="${it.time}" style="width:80px"></td>
+    `;
+    tableBody.appendChild(tr);
+  }
+
+  // attach listeners
+  tableBody.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change', e=>{
+    const id = e.target.dataset.id; const item = state.find(x=>x.id===id); if(!item) return; item.done = e.target.checked; saveState(); updateStats(); render();
+  }));
+  tableBody.querySelectorAll('input[type=number]').forEach(inp=>inp.addEventListener('change', e=>{
+    const id = e.target.dataset.idTime; const val = parseFloat(e.target.value) || 0; const item = state.find(x=>x.id===id); if(!item) return; item.time = val; saveState(); updateStats();
+  }));
+
+  updateStats();
+}
+
+function updateStats(){
+  const total = state.length;
+  const done = state.filter(i=>i.done).length;
+  const percent = total? Math.round(done/total*100):0;
+  progressText.innerText = i18n[langSelect.value].progress(done,total,percent);
+  progressFill.style.width = percent + '%';
+
+  const doneHours = state.filter(i=>i.done).reduce((s,i)=>s + (parseFloat(i.time)||0),0);
+  const days = (doneHours/8).toFixed(2);
+  timeSummary.innerText = i18n[langSelect.value].timeSummary(doneHours, days);
+}
+
+function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+// export CSV for current visible set or full
+function exportCsv(){
+  const lang = langSelect.value;
+  // use current filtered (visible) rows
+  const q = (searchInput.value||'').toLowerCase(); const filter = filterSelect.value;
+  const visible = state.filter(it => (filter==='all' || it.category===filter)).filter(it=> (formatName(it,lang)+formatDesc(it,lang)).toLowerCase().includes(q));
+  const rows = [];
+  rows.push(['id','category','name','description','time','done']);
+  for(const it of visible){
+    const cols = [it.id, localizeCategory(it.category,lang), formatName(it,lang), formatDesc(it,lang), String(it.time), it.done? '1':'0'];
+    rows.push(cols.map(c=> '"'+String(c).replace(/"/g,'""')+'"').join(','));
+  }
+  const csv = rows.join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='security-checklist.csv'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+}
+
+// add/reset
+function addTask(){
+  const id = 't' + Date.now();
+  const newItem = {id, category:'general', name:{ru:'Новая задача',en:'New task',uk:'Нове завдання',fr:'Nouvelle tâche',de:'Neue Aufgabe'}, desc:{ru:'Описание',en:'Description',uk:'Опис',fr:'Description',de:'Beschreibung'}, time:1, done:false};
+  state.push(newItem); saveState(); buildCategoryOptions(langSelect.value); render();
+}
+function resetAll(){ if(!confirm('Сбросить чек-лист?')) return; state = initialData.map(i=>({...i, done:false})); saveState(); buildCategoryOptions(langSelect.value); render(); }
+
+// theme persistence
+function applySavedTheme(){ const t = localStorage.getItem('security_theme') || 'light'; if(t==='dark'){ document.documentElement.classList.add('dark'); document.body.classList.add('dark'); themeBtn.innerText='🌙'; } else { document.documentElement.classList.remove('dark'); document.body.classList.remove('dark'); themeBtn.innerText='🌞'; }}
+function toggleTheme(){ const dark = document.body.classList.toggle('dark'); localStorage.setItem('security_theme', dark? 'dark':'light'); themeBtn.innerText = dark? '🌙':'🌞'; }
+
+// language apply
+function applyLang(lang){ const t = i18n[lang]; document.getElementById('title').innerText = t.title; document.getElementById('subtitle').innerText = t.subtitle; document.getElementById('searchInput').placeholder = t.search; document.getElementById('thCategory').innerText = t.thCategory; document.getElementById('thName').innerText = t.thName; document.getElementById('thDesc').innerText = t.thDesc; document.getElementById('thTime').innerText = t.thTime; document.getElementById('addBtn').innerText = t.add; document.getElementById('resetBtn').innerText = t.reset; document.getElementById('exportCsv').innerText = t.export; document.getElementById('printBtn').innerText = t.print; buildCategoryOptions(lang); render(); }
+
+// events
+langSelect.addEventListener('change', ()=>{ applyLang(langSelect.value); localStorage.setItem('security_lang', langSelect.value); });
+searchInput.addEventListener('input', ()=>render());
+filterSelect.addEventListener('change', ()=>render());
+document.getElementById('exportCsv').addEventListener('click', exportCsv);
+document.getElementById('printBtn').addEventListener('click', ()=>{ window.print(); });
+document.getElementById('addBtn').addEventListener('click', addTask);
+document.getElementById('resetBtn').addEventListener('click', resetAll);
+themeBtn.addEventListener('click', ()=>{ toggleTheme(); });
+
+// init
+state = loadState();
+const savedLang = localStorage.getItem('security_lang') || 'ru'; langSelect.value = savedLang; applyLang(savedLang);
+applySavedTheme();
+render();
+
+// ensure saving before unload
+window.addEventListener('beforeunload', ()=> saveState());
+</script>
+</body>
+</html>

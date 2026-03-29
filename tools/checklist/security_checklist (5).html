@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Security Checklist — Безопасность сайтов и веб-приложений</title>
+  <style>
+    :root{ --bg:#fbfbfb; --panel:#ffffff; --text:#0b1220; --muted:#5b6b7a; --accent:#16a34a; --input:#edf2f7 }
+    body{font-family:Inter, Roboto, Arial, sans-serif; margin:0; padding:24px; background:var(--bg); color:var(--text); -webkit-print-color-adjust:exact; color-adjust:exact}
+    .dark{ --bg:#0b1220; --panel:#0f1724; --text:#e6eef6; --muted:#9fb0c3; --accent:#34d399; --input:#0b1220 }
+
+    .container{max-width:1200px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+    h1{font-size:18px;margin:0}
+    .controls{display:flex;gap:8px;align-items:center}
+
+    button, select, input[type="text"], input[type="date"], input[type="number"]{font-size:14px}
+    select,input[type="text"],input[type="date"]{padding:8px;border-radius:8px;border:1px solid #ccd7e0;color:var(--text);background:var(--panel)}
+    .dark select,.dark input[type="text"],.dark input[type="date"]{border:1px solid #22303f;background:var(--input);color:var(--text)}
+
+    .theme-btn{width:40px;height:40px;border-radius:999px;border:none;display:inline-flex;align-items:center;justify-content:center;font-size:18px;background:#f1f5f9;cursor:pointer}
+    .dark .theme-btn{background:#071022}
+
+    .panel{background:var(--panel);padding:14px;border-radius:10px;box-shadow:0 1px 2px rgba(8,15,22,0.04);}
+    .row{display:flex;gap:12px;align-items:center}
+
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:10px;border-bottom:1px solid rgba(15,23,42,0.06);text-align:left}
+    .dark th,.dark td{border-bottom:1px solid rgba(255,255,255,0.04)}
+
+    .muted{color:var(--muted)}
+    .accent{color:var(--accent)}
+
+    .progress-wrap{display:flex;align-items:center;gap:12px}
+    .progress-bar{height:10px;background:rgba(0,0,0,0.06);border-radius:999px;overflow:hidden;width:320px}
+    .progress-fill{height:100%;background:var(--accent);width:0%}
+
+    .small{font-size:13px}
+    .actions{display:flex;gap:8px}
+
+    input[type="checkbox"]{width:18px;height:18px}
+
+    /* Dark theme controls contrast (buttons/inputs) */
+    .dark button.panel, .dark button, .dark .btn, .dark .panel { background:#22303f; color:#e6eef6; border:1px solid #2f3c46 }
+    .dark select, .dark input { background:#0b1a26; color:#e6eef6; border:1px solid #284050 }
+
+    /* date icon visibility */
+    .dark input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1) hue-rotate(180deg) }
+
+    /* Priority color classes (apply to select.priority) */
+    select.priority.priority-high { color: #e11d48; font-weight:700 }
+    select.priority.priority-medium { color: #f59e0b; font-weight:700 }
+    select.priority.priority-low { color: #10b981; font-weight:700 }
+
+    /* responsive */
+    @media(max-width:900px){ .row{flex-direction:column;align-items:stretch} table{font-size:13px} }
+
+    @media print{
+      body{background:var(--bg);color:var(--text)}
+      .theme-btn{display:none}
+      .controls button{display:inline}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1 id="title">Security Checklist — Безопасность сайтов и веб-приложений</h1>
+        <div class="muted small" id="subtitle">Интерактивный чек-лист с переводами, фильтрацией, экспортом и подсчётом прогресса.</div>
+      </div>
+
+      <div class="controls">
+        <button id="themeBtn" class="theme-btn" title="Toggle theme">🌞</button>
+
+        <select id="langSelect" aria-label="language selector" title="Язык"></select>
+
+        <button id="exportCsv" class="panel small" title="Export CSV">Export CSV</button>
+        <button id="printBtn" class="panel small" title="Print">Print</button>
+      </div>
+    </header>
+
+    <div class="panel">
+      <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div style="display:flex;gap:8px;align-items:center;flex:1;flex-wrap:wrap">
+          <input id="searchInput" type="text" placeholder="Search..." style="width:320px" />
+
+          <select id="categoryFilter" style="min-width:160px"></select>
+
+          <select id="priorityFilter" style="min-width:120px">
+            <option value="all">All priorities</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+
+          <select id="ownerFilter" style="min-width:160px"></select>
+
+          <label class="small" for="dueFilter">Due before:</label>
+          <input id="dueFilter" type="date" />
+        </div>
+
+        <div class="progress-wrap small">
+          <div id="progressText">Выполнено: 0 из 0 — 0%</div>
+          <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+        </div>
+      </div>
+
+      <div style="overflow:auto">
+        <table aria-label="checklist table">
+          <thead>
+            <tr>
+              <th style="width:60px">✅</th>
+              <th id="thCategory">Категория</th>
+              <th id="thName">Задача</th>
+              <th id="thDesc">Описание</th>
+              <th id="thTime">Время (ч)</th>
+              <th id="thPriority">Приоритет</th>
+              <th id="thOwner">Ответственный</th>
+              <th id="thDue">Срок</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+        <div class="small muted" id="timeSummary">Пройдено времени: 0 ч — Оценка выполнения: 0 дн</div>
+        <div class="actions">
+          <button id="resetBtn" class="small">Сброс</button>
+          <button id="addBtn" class="small">Добавить задачу</button>
+        </div>
+      </div>
+    </div>
+
+    <footer style="margin-top:12px;font-size:12px;color:var(--muted)">Файл создан для интеграции в репозиторий — адаптируй под свои правила и CI/CD.</footer>
+  </div>
+
+<script>
+const STORAGE_KEY = 'security_checklist_v_final';
+const locales = {
+  ru:{code:'ru', flag:'🇷🇺', title:'Security Checklist — Безопасность сайтов и веб-приложений', subtitle:'Интерактивный чек-лист с переводами, фильтрацией, экспортом и подсчётом прогресса.', search:'Поиск...', categoryAll:'Все категории', priorityAll:'Все приоритеты', ownerAll:'Все', dueLabel:'До', progress:(done,total,percent)=>`Выполнено: ${done} из ${total} — ${percent}%`, timeSummary:(hours,days)=>`Пройдено времени: ${hours} ч — Оценка выполнения: ${days} дн`},
+  en:{code:'en', flag:'🇬🇧', title:'Security Checklist — Website & Web App Security', subtitle:'Interactive checklist with translations, filtering, export and progress.', search:'Search...', categoryAll:'All categories', priorityAll:'All priorities', ownerAll:'All', dueLabel:'Due before', progress:(d,t,p)=>`Completed: ${d} of ${t} — ${p}%`, timeSummary:(h,days)=>`Time spent: ${h} h — Estimate: ${days} days`},
+  uk:{code:'uk', flag:'🇺🇦', title:'Security Checklist — Безпека сайтів та веб-додатків', subtitle:'Інтерактивний чек-лист з перекладами, фільтрацією, експортом та підрахунком прогресу.', search:'Пошук...', categoryAll:'Всі категорії', priorityAll:'Всі пріоритети', ownerAll:'Усі', dueLabel:'До', progress:(d,t,p)=>`Виконано: ${d} з ${t} — ${p}%`, timeSummary:(h,days)=>`Пройдений час: ${h} год — Оцінка: ${days} дн`},
+  fr:{code:'fr', flag:'🇫🇷', title:'Security Checklist — Sécurité des sites et applications web', subtitle:'Checklist interactive avec traductions, filtrage, export et progression.', search:'Recherche...', categoryAll:'Toutes catégories', priorityAll:'Toutes priorités', ownerAll:'Tous', dueLabel:"Jusqu'à", progress:(d,t,p)=>`Réalisé: ${d} sur ${t} — ${p}%`, timeSummary:(h,days)=>`Temps écoulé: ${h} h — Est.: ${days} j`},
+  de:{code:'de', flag:'🇩🇪', title:'Security Checklist — Sicherheit von Websites und Webanwendungen', subtitle:'Interaktive Checkliste mit Übersetzungen, Filterung, Export und Fortschritt.', search:'Suchen...', categoryAll:'Alle Kategorien', priorityAll:'Alle Prioritäten', ownerAll:'Alle', dueLabel:'Bis', progress:(d,t,p)=>`Erledigt: ${d} von ${t} — ${p}%`, timeSummary:(h,days)=>`Verbrauchte Zeit: ${h} Std — Schätzung: ${days} Tage`}
+};
+
+const initialData = [
+  {id:'t1', category:'backend', name:{ru:'CSRF защита',uk:'Захист CSRF',en:'CSRF protection',fr:'Protection CSRF',de:'CSRF-Schutz'}, desc:{ru:'Использовать middleware (Django/Flask/FastAPI)',uk:'Використовувати middleware',en:'Use middleware (Django/Flask/FastAPI)',fr:'Utiliser middleware',de:'Middleware verwenden'}, time:2, priority:'High', owner:'Security', due:'2025-10-05', done:false},
+  {id:'t2', category:'backend', name:{ru:'SQL Injection',uk:"SQL ін'єкції",en:'SQL Injection',fr:'Injection SQL',de:'SQL-Injection'}, desc:{ru:'Использовать ORM и parametrized queries',uk:'Використовувати ORM',en:'Use ORM and parametrized queries',fr:'Utiliser ORM et requêtes paramétrées',de:'ORM und parametrisierte Abfragen'}, time:1.5, priority:'High', owner:'Backend', due:'2025-10-10', done:false},
+  {id:'t3', category:'frontend', name:{ru:'XSS и санитизация',uk:'XSS і санітизація',en:'XSS / Sanitization',fr:'XSS / Assainissement',de:'XSS / Sanitization'}, desc:{ru:'CSP, sanitize raw HTML',uk:'CSP, sanitize raw HTML',en:'CSP, sanitize raw HTML',fr:'CSP, nettoyer le HTML',de:'CSP, rohes HTML bereinigen'}, time:1, priority:'Medium', owner:'Frontend', due:'2025-09-30', done:false},
+  {id:'t4', category:'frontend', name:{ru:'Cookies: HttpOnly / Secure',uk:'Cookies: HttpOnly / Secure',en:'Cookies: HttpOnly / Secure',fr:'Cookies: HttpOnly / Secure',de:'Cookies: HttpOnly / Secure'}, desc:{ru:'Настроить SameSite, Secure, HttpOnly',uk:'Налаштувати SameSite, Secure, HttpOnly',en:'Set SameSite, Secure, HttpOnly',fr:'Configurer SameSite, Secure, HttpOnly',de:'SameSite, Secure, HttpOnly setzen'}, time:0.5, priority:'High', owner:'Frontend', due:'2025-10-01', done:false},
+  {id:'t5', category:'mkdocs', name:{ru:'Проверка плагинов MkDocs',uk:'Перевірка плагінів MkDocs',en:'MkDocs plugins review',fr:'Vérifier plugins MkDocs',de:'MkDocs-Plugins prüfen'}, desc:{ru:'Минимизировать 3rd-party плагины',uk:'Мінімізувати сторонні плагіни',en:'Minimize 3rd-party plugins',fr:'Minimiser plugins tiers',de:'Drittanbieter-Plugins minimieren'}, time:0.5, priority:'Low', owner:'Docs', due:'2025-11-01', done:false},
+  {id:'t6', category:'monorepo', name:{ru:'Управление секретами',uk:'Управління секретами',en:'Secrets management',fr:'Gestion des secrets',de:'Secrets-Management'}, desc:{ru:'Использовать Secret Manager, не хранить в VCS',uk:'Використовувати Secret Manager',en:'Use Secret Manager, do not store in VCS',fr:'Utiliser Secret Manager',de:'Secret Manager nutzen'}, time:2, priority:'High', owner:'DevOps', due:'2025-10-15', done:false},
+  {id:'t7', category:'monorepo', name:{ru:'Docker best practices',uk:'Docker best practices',en:'Docker best practices',fr:'Bonnes pratiques Docker',de:'Docker Best Practices'}, desc:{ru:'Не использовать image:latest, минимизировать слои',uk:'Не використовувати image:latest',en:'Avoid image:latest, minimize layers',fr:'Éviter image:latest',de:'Kein image:latest verwenden'}, time:1, priority:'Medium', owner:'DevOps', due:'2025-10-20', done:false},
+  {id:'t8', category:'general', name:{ru:'HTTPS everywhere',uk:'HTTPS повсюди',en:'HTTPS everywhere',fr:'HTTPS partout',de:'HTTPS überall'}, desc:{ru:"Let's Encrypt / Cloudflare, HSTS",uk:"Let's Encrypt / Cloudflare, HSTS",en:"Let's Encrypt / Cloudflare, HSTS",fr:"Let's Encrypt / Cloudflare, HSTS",de:"Let's Encrypt / Cloudflare, HSTS"}, time:0.5, priority:'High', owner:'Ops', due:'2025-09-28', done:false},
+  {id:'t9', category:'general', name:{ru:'Rate limiting',uk:'Rate limiting',en:'Rate limiting',fr:'Limitation de débit',de:'Rate limiting'}, desc:{ru:'DRF throttling, FastAPI rate limit libs',uk:'DRF throttling...',en:'DRF throttling, FastAPI libs',fr:'DRF throttling...',de:'DRF throttling...'}, time:1, priority:'Medium', owner:'Backend', due:'2025-10-05', done:false},
+  {id:'t10', category:'general', name:{ru:'Логирование',uk:'Логування',en:'Logging',fr:'Journalisation',de:'Logging'}, desc:{ru:'Исключать пароли/токены, централизовать ошибки',uk:'Не логувати паролі/токени',en:'Exclude passwords/tokens from logs',fr:'Exclure mots de passe / tokens',de:'Passwörter/Tokens aus Logs ausschließen'}, time:1, priority:'Low', owner:'Ops', due:'2025-11-10', done:false}
+];
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return initialData.map(i=> ({...i}));
+    const saved = JSON.parse(raw);
+    if(!Array.isArray(saved)) return initialData.map(i=> ({...i}));
+    const map = new Map(saved.map(s=>[s.id,s]));
+    return initialData.map(i=>{
+      const s = map.get(i.id);
+      if(!s) return {...i};
+      return {...i, done: !!s.done, time: typeof s.time !== 'undefined' ? s.time : i.time, priority: s.priority || i.priority, owner: s.owner || i.owner, due: s.due || i.due };
+    });
+  }catch(e){ console.error('loadState',e); return initialData.map(i=> ({...i})); }
+}
+function saveState(){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){console.error('saveState',e);} }
+
+let state = loadState();
+
+// DOM
+const tableBody = document.getElementById('tableBody');
+const categoryFilter = document.getElementById('categoryFilter');
+const priorityFilter = document.getElementById('priorityFilter');
+const ownerFilter = document.getElementById('ownerFilter');
+const dueFilter = document.getElementById('dueFilter');
+const searchInput = document.getElementById('searchInput');
+const progressText = document.getElementById('progressText');
+const progressFill = document.getElementById('progressFill');
+const timeSummary = document.getElementById('timeSummary');
+const langSelect = document.getElementById('langSelect');
+const themeBtn = document.getElementById('themeBtn');
+
+Object.keys(locales).forEach(code=>{ const opt=document.createElement('option'); opt.value=code; opt.textContent = `${locales[code].flag} ${code.toUpperCase()}`; langSelect.appendChild(opt); });
+
+function localizeCategory(cat, lang){ const map = { backend:{ru:'Backend',en:'Backend',uk:'Backend',fr:'Backend',de:'Backend'}, frontend:{ru:'Frontend',en:'Frontend',uk:'Frontend',fr:'Frontend',de:'Frontend'}, mkdocs:{ru:'MkDocs',en:'MkDocs',uk:'MkDocs',fr:'MkDocs',de:'MkDocs'}, monorepo:{ru:'Monorepo',en:'Monorepo',uk:'Monorepo',fr:'Monorepo',de:'Monorepo'}, general:{ru:'Общие меры',en:'General',uk:'Загальні',fr:'Général',de:'Allgemein'} }; return (map[cat] && map[cat][lang]) ? map[cat][lang] : cat; }
+function formatName(item, lang){ return (item.name && item.name[lang]) ? item.name[lang] : item.name['en'] || Object.values(item.name)[0]; }
+function formatDesc(item, lang){ return (item.desc && item.desc[lang]) ? item.desc[lang] : item.desc['en'] || Object.values(item.desc)[0]; }
+
+function buildFilters(lang){
+  const L = locales[lang] || locales.ru;
+  categoryFilter.innerHTML = ''; const optAll = document.createElement('option'); optAll.value='all'; optAll.textContent = L.categoryAll; categoryFilter.appendChild(optAll);
+  Array.from(new Set(initialData.map(i=>i.category))).forEach(c=>{ const o=document.createElement('option'); o.value=c; o.textContent=localizeCategory(c,lang); categoryFilter.appendChild(o); });
+  const owners = Array.from(new Set(state.map(s=>s.owner))).filter(Boolean);
+  ownerFilter.innerHTML=''; const oAll=document.createElement('option'); oAll.value='all'; oAll.textContent=L.ownerAll; ownerFilter.appendChild(oAll);
+  owners.forEach(owner=>{ const o=document.createElement('option'); o.value=owner; o.textContent=owner; ownerFilter.appendChild(o); });
+}
+
+function render(){
+  const lang = langSelect.value || 'ru'; tableBody.innerHTML=''; const q=(searchInput.value||'').toLowerCase(); const cat=categoryFilter.value||'all'; const pr=priorityFilter.value||'all'; const owner=ownerFilter.value||'all'; const dueBefore=dueFilter.value||'';
+  const visible = state.filter(item => {
+    if(cat !== 'all' && item.category !== cat) return false;
+    if(pr !== 'all' && String(item.priority) !== pr) return false;
+    if(owner !== 'all' && item.owner !== owner) return false;
+    if(dueBefore && item.due && item.due > '' && item.due > dueBefore) return false;
+    const hay = (formatName(item,lang) + ' ' + formatDesc(item,lang) + ' ' + item.owner + ' ' + (item.priority||'')).toLowerCase();
+    if(q && !hay.includes(q)) return false; return true;
+  });
+
+  for(const it of visible){
+    const tr=document.createElement('tr');
+    tr.innerHTML = `
+      <td style="width:60px;text-align:center"><input type="checkbox" data-id="${it.id}" ${it.done? 'checked':''}></td>
+      <td>${escapeHtml(localizeCategory(it.category, lang))}</td>
+      <td><strong>${escapeHtml(formatName(it,lang))}</strong></td>
+      <td>${escapeHtml(formatDesc(it,lang))}</td>
+      <td style="width:90px"><input type="number" step="0.5" min="0" data-id-time="${it.id}" value="${it.time}" style="width:70px"></td>
+      <td style="width:110px">
+        <select class="priority" data-id-priority="${it.id}" style="width:100px">
+          <option value="High" ${it.priority==='High'?'selected':''}>High</option>
+          <option value="Medium" ${it.priority==='Medium'?'selected':''}>Medium</option>
+          <option value="Low" ${it.priority==='Low'?'selected':''}>Low</option>
+        </select>
+      </td>
+      <td style="width:140px"><input type="text" data-id-owner="${it.id}" value="${escapeHtml(it.owner)}" style="width:120px"></td>
+      <td style="width:140px"><input type="date" data-id-due="${it.id}" value="${it.due}"></td>
+    `;
+    tableBody.appendChild(tr);
+  }
+
+  // listeners
+  tableBody.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change', e=>{ const id=e.target.dataset.id; const item=state.find(x=>x.id===id); if(!item) return; item.done=e.target.checked; saveState(); updateStats(); }));
+  tableBody.querySelectorAll('input[data-id-time]').forEach(inp=>inp.addEventListener('change', e=>{ const id=e.target.dataset.idTime; const v=parseFloat(e.target.value)||0; const item=state.find(x=>x.id===id); if(!item) return; item.time=v; saveState(); updateStats(); }));
+  tableBody.querySelectorAll('select[data-id-priority]').forEach(sel=>sel.addEventListener('change', e=>{ const id=e.target.dataset.idPriority; const v=e.target.value; const item=state.find(x=>x.id===id); if(!item) return; item.priority=v; saveState(); buildFilters(langSelect.value); render(); }));
+  tableBody.querySelectorAll('input[data-id-owner]').forEach(inp=>inp.addEventListener('change', e=>{ const id=e.target.dataset.idOwner; const v=e.target.value; const item=state.find(x=>x.id===id); if(!item) return; item.owner=v; saveState(); buildFilters(langSelect.value); render(); }));
+  tableBody.querySelectorAll('input[data-id-due]').forEach(inp=>inp.addEventListener('change', e=>{ const id=e.target.dataset.idDue; const v=e.target.value; const item=state.find(x=>x.id===id); if(!item) return; item.due=v; saveState(); render(); }));
+
+  applyPriorityStyles();
+  updateStats();
+}
+
+function applyPriorityStyles(){ document.querySelectorAll('select.priority').forEach(sel=>{ sel.classList.remove('priority-high','priority-medium','priority-low'); const v=(sel.value||'').toLowerCase(); if(v==='high') sel.classList.add('priority-high'); if(v==='medium') sel.classList.add('priority-medium'); if(v==='low') sel.classList.add('priority-low'); }); }
+
+function updateStats(){ const total=state.length; const done=state.filter(i=>i.done).length; const percent = total?Math.round(done/total*100):0; progressText.innerText = locales[langSelect.value].progress(done,total,percent); progressFill.style.width = percent + '%'; const doneHours = state.filter(i=>i.done).reduce((s,i)=>s + (parseFloat(i.time)||0),0); const days=(doneHours/8).toFixed(2); timeSummary.innerText = locales[langSelect.value].timeSummary(doneHours, days); }
+
+function escapeHtml(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function exportCsv(){ const lang = langSelect.value; const q=(searchInput.value||'').toLowerCase(); const cat=categoryFilter.value||'all'; const pr=priorityFilter.value||'all'; const owner=ownerFilter.value||'all'; const dueBefore=dueFilter.value||''; const visible = state.filter(item=>{ if(cat!=='all'&&item.category!==cat) return false; if(pr!=='all'&&String(item.priority)!==pr) return false; if(owner!=='all'&&item.owner!==owner) return false; if(dueBefore&&item.due&&item.due>''&&item.due>dueBefore) return false; const hay=(formatName(item,lang)+' '+formatDesc(item,lang)+' '+item.owner+' '+(item.priority||'')).toLowerCase(); if(q && !hay.includes(q)) return false; return true; }); const rows=[['id','category','name','description','time','priority','owner','due','done']]; for(const it of visible){ rows.push([it.id, localizeCategory(it.category,lang), formatName(it,lang), formatDesc(it,lang), it.time, it.priority, it.owner, it.due, it.done? '1':'0']); } const csv = rows.map(r=> r.map(cell=> '"'+String(cell).replace(/"/g,'""')+'"').join(',')).join('\n'); const blob=new Blob([csv], {type:'text/csv;charset=utf-8;'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='security-checklist.csv'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url); }
+
+function addTask(){ const id='t'+Date.now(); const newItem={id, category:'general', name:{ru:'Новая задача',en:'New task',uk:'Нове завдання',fr:'Nouvelle tâche',de:'Neue Aufgabe'}, desc:{ru:'Описание',en:'Description',uk:'Опис',fr:'Description',de:'Beschreibung'}, time:1, priority:'Medium', owner:'Unassigned', due:'', done:false}; state.push(newItem); saveState(); buildFilters(langSelect.value); render(); }
+function resetAll(){ if(!confirm('Сбросить чек-лист?')) return; state = initialData.map(i=>({...i})); saveState(); buildFilters(langSelect.value); render(); }
+
+function buildFilters(lang){ const L = locales[lang]||locales.ru; categoryFilter.innerHTML=''; const allOpt=document.createElement('option'); allOpt.value='all'; allOpt.textContent=L.categoryAll; categoryFilter.appendChild(allOpt); Array.from(new Set(initialData.map(i=>i.category))).forEach(c=>{ const o=document.createElement('option'); o.value=c; o.textContent=localizeCategory(c,lang); categoryFilter.appendChild(o); }); ownerFilter.innerHTML=''; const allOwner=document.createElement('option'); allOwner.value='all'; allOwner.textContent=L.ownerAll; ownerFilter.appendChild(allOwner); Array.from(new Set(state.map(s=>s.owner))).filter(Boolean).forEach(owner=>{ const o=document.createElement('option'); o.value=owner; o.textContent=owner; ownerFilter.appendChild(o); }); }
+
+function applyLang(lang){ localStorage.setItem('security_lang', lang); const L=locales[lang]||locales.ru; document.getElementById('title').innerText = L.title; document.getElementById('subtitle').innerText = L.subtitle; searchInput.placeholder = L.search; buildFilters(lang); render(); }
+
+function applySaved(){ const lang = localStorage.getItem('security_lang') || 'ru'; langSelect.value = lang; applyLang(lang); const dark = localStorage.getItem('security_theme') === 'dark'; if(dark){ document.body.classList.add('dark'); themeBtn.innerText='🌙'; } else { document.body.classList.remove('dark'); themeBtn.innerText='🌞'; } }
+
+// events
+langSelect.addEventListener('change', ()=> applyLang(langSelect.value)); searchInput.addEventListener('input', ()=> render()); categoryFilter.addEventListener('change', ()=> render()); priorityFilter.addEventListener('change', ()=> render()); ownerFilter.addEventListener('change', ()=> render()); dueFilter.addEventListener('change', ()=> render()); document.getElementById('exportCsv').addEventListener('click', exportCsv); document.getElementById('printBtn').addEventListener('click', ()=> window.print()); document.getElementById('addBtn').addEventListener('click', addTask); document.getElementById('resetBtn').addEventListener('click', resetAll); themeBtn.addEventListener('click', ()=>{ const dark = document.body.classList.toggle('dark'); localStorage.setItem('security_theme', dark? 'dark':'light'); themeBtn.innerText = dark? '🌙':'🌞'; saveState(); });
+
+// init
+applySaved(); buildFilters(langSelect.value || 'ru'); render(); window.addEventListener('beforeunload', ()=> saveState());
+</script>
+</body>
+</html>

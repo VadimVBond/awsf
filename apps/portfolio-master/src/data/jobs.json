@@ -1,0 +1,94 @@
+[
+    {
+        "id": "le_warehouse",
+        "jobPicture": "le.webp",
+        "jobColor": "#0086eb",
+        "jobTitle": "Desarrollador Web Full Stack",
+        "jobTime": "Enero 2022 - Noviembre 2022 (11 meses)",
+        "jobCompany": "Lámparas Estella S.A. de C.V.",
+        "jobDescription": "Colaboré en el desarrollo de un sistema web destinado a usarse en los almacenes de la empresa. La implementación de este sistema ayudó a reducir hasta en un 50% el tiempo requerido para completar las actividades internas, lo que tuvo un impacto directo en la productividad de la empresa.",
+        "jobActivities": [
+            "Diseño de interfaces de usuario con Figma.",
+            "Programación de interfaces con React.js.",
+            "Desarrollo de componentes reutilizables.",
+            "Desarrollo de APIs con Node.js y Express.js.",
+            "Consumo de REST APIs con JavaScript.",
+            "Modelado e implementación de bases de datos PostgreSQL."
+        ],
+        "jobTechnologies": [
+            { "name": "React.js", "icon": "react" },
+            {
+                "name": "Styled Components",
+                "icon": "styledcomponents"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "javascript"
+            },
+            {
+                "name": "Node.js",
+                "icon": "node"
+            },
+            {
+                "name": "Express.js",
+                "icon": "express"
+            },
+            {
+                "name": "NPM",
+                "icon": "npm"
+            },
+            {
+                "name": "PostgreSQL",
+                "icon": "postgresql"
+            },
+            {
+                "name": "Sequelize",
+                "icon": "sequelize"
+            },
+            {
+                "name": "Git",
+                "icon": "git"
+            },
+            {
+                "name": "Github",
+                "icon": "github"
+            },
+            {
+                "name": "Figma",
+                "icon": "figma"
+            }
+        ]
+    },
+    {
+        "id": "sca-fi",
+        "jobPicture": "fi.webp",
+        "jobColor": "#3a7d44",
+        "jobTitle": "Desarrollador Web Full Stack",
+        "jobTime": "Agosto 2020 - Julio 2021 (1 año)",
+        "jobCompany": "Facultad de Ingeniería UAEMex",
+        "jobDescription": "Colaboré en el desarrollo del \"Sistema de Control de Acceso\", un sistema web para la Facultad de Ingeniería que permitió registrar y controlar el aforo a las instalaciones del recinto educativo, lo que ayudó a minimizar el riesgo tras la contingencia sanitaria.",
+        "jobActivities": [
+            "Diseño y programación de interfaces de usuario con HTML, CSS y JavaScript, con diseño responsivo.",
+            "Desarrollo backend con PHP.",
+            "Modelado e implementación de bases de datos MySQL."
+        ],
+        "jobTechnologies": [
+            { "name": "HTML", "icon": "html" },
+            { "name": "CSS", "icon": "css" },
+            { "name": "JavaScript", "icon": "javascript" },
+            { "name": "Bootstrap", "icon": "bootstrap" },
+            { "name": "JQuery", "icon": "jquery" },
+            { "name": "PHP", "icon": "php" },
+            { "name": "MySQL", "icon": "mysql" },
+            { "name": "Composer", "icon": "composer" },
+            {
+                "name": "Git",
+                "icon": "git"
+            },
+            {
+                "name": "GitLab",
+                "icon": "gitlab"
+            }
+        ]
+    }
+]

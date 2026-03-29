@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { loadMessages } from '../i18n'
+const messages = await loadMessages(Astro.currentLocale)
+const t = (key: string) => messages[key] ?? key
+---
+
+<BaseLayout>
+  <h1>{t('home.title')}</h1>
+  <p>{t('home.description')}</p>
+</BaseLayout>
